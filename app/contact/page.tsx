@@ -10,7 +10,7 @@ const ContactPage = () => {
             Contact Me
           </h2>
           <p className="mt-2 text-center text-sm text-gray-600">
-            Fill out the form below, and I'll get back to you shortly.
+            Fill out the form below, and I&apos;ll get back to you shortly.
           </p>
         </div>
         <ContactForm />

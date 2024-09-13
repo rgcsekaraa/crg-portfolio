@@ -12,8 +12,8 @@ export default async function handler(
 
     try {
       const data = await resend.emails.send({
-        from: 'Your Name <onboarding@resend.dev>',
-        to: ['recipient@example.com'],
+        from: 'chan <onboarding@resend.dev>',
+        to: ['rgcsekaraa@gmail.com'],
         subject: `New Contact Form Submission: ${contactReason}`,
         html: `
           <h1>New Contact Form Submission</h1>

@@ -1,101 +1,110 @@
-import Image from "next/image";
+import Image from 'next/image'
+import { SOCIALS } from '../data/socials'
+import { SocialLink } from '@/components/social-link'
+import React from 'react'
+import { LINKS } from '@/lib/constants'
+import RecentPosts from '@/components/recent-posts'
 
 export default function Home() {
   return (
-    <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
-      <main className="flex flex-col gap-8 row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="https://nextjs.org/icons/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="list-inside list-decimal text-sm text-center sm:text-left font-[family-name:var(--font-geist-mono)]">
-          <li className="mb-2">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] px-1 py-0.5 rounded font-semibold">
-              app/page.tsx
-            </code>
-            .
-          </li>
-          <li>Save and see your changes instantly.</li>
-        </ol>
+    <React.Fragment>
+      <div className='mx-auto max-w-screen-2xl px-4'>
+        <section className='mb-4 grid grid-cols-1 gap-4 md:grid-cols-[1fr,1px,2fr]'>
+          {/* Left Column */}
+          <div className='flex w-full flex-col items-center text-center'>
+            <div className='relative mb-3 mt-4 h-[130px] w-[130px] overflow-hidden rounded-full'>
+              <Image
+                src='/_static/me.png'
+                width={130}
+                height={130}
+                alt='avatar'
+                className='transform cursor-pointer transition-transform duration-500 ease-in-out hover:scale-105'
+                priority
+              />
+            </div>
 
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="https://nextjs.org/icons/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:min-w-44"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
-          </a>
+            <h1 className='text-2xl font-bold'>Chandrasekaraa RG</h1>
+            <div className='flex items-center text-sm text-gray-500 dark:text-gray-200'>
+              <svg
+                xmlns='http://www.w3.org/2000/svg'
+                className='mr-1 h-4 w-4'
+                fill='none'
+                viewBox='0 0 24 24'
+                stroke='currentColor'
+              >
+                <path
+                  strokeLinecap='round'
+                  strokeLinejoin='round'
+                  strokeWidth='2'
+                  d='M12 2C8.686 2 6 4.686 6 8c0 5.25 6 12 6 12s6-6.75 6-12c0-3.314-2.686-6-6-6zM12 10a2 2 0 110-4 2 2 0 010 4z'
+                />
+              </svg>
+              <p>Brisbane, Australia</p>
+            </div>
+
+            <div className='mb-2 mt-4 flex space-x-4'>
+              {SOCIALS.map(social => (
+                <SocialLink
+                  key={social.label}
+                  aria-label={`Follow on ${social.label}`}
+                  href={social.href}
+                  icon={social.icon}
+                />
+              ))}
+            </div>
+
+            <p className='mt-4 inline-block cursor-pointer'>
+              <a
+                href={LINKS.RESUME}
+                target='_blank'
+                rel='noopener noreferrer'
+                className='rounded-lg border border-black px-3 py-1 text-black transition-colors duration-200 ease-in hover:bg-black hover:text-white dark:border-white dark:text-white dark:hover:bg-white dark:hover:text-black'
+              >
+                View Resume
+              </a>
+            </p>
+          </div>
+
+          {/* Vertical Line */}
+          <div className='hidden w-[1px] bg-gray-200 dark:bg-gray-800 md:block'></div>
+
+          {/* Right Column */}
+          <div className='text-gray-700 dark:text-gray-100'>
+            <p className='mt-6'>
+              I&rsquo;m a fullstack software engineer specializing in building
+              scalable web applications with rich user interfaces using
+              JavaScript.
+            </p>
+            <p className='mb-4 mt-4'>
+              Over the years, I&rsquo;ve worked on multiple startups, building
+              end-to-end products in the insurance, game-tech, and video
+              streaming domains. I have also actively contributed to various
+              open-source projects. Currently, I&rsquo;m focused on developing
+              iGaming solutions.
+            </p>
+
+            <p className='mb-4'>
+              If you&rsquo;d like to collaborate, please&nbsp;
+              <a
+                href='mailto:rgcsekaraa@gmail.com'
+                className='inline-block border-b'
+              >
+                send me an email
+              </a>
+              &nbsp;or reach out on any of my social handles.
+            </p>
+          </div>
+        </section>
+
+        <div className='my-8 w-full border-t border-gray-200 dark:border-gray-800' />
+
+        <div>
+          <h2 className='mb-6 text-2xl font-bold'>Latest posts</h2>
+          <div className=''>
+            <RecentPosts />
+          </div>
         </div>
-      </main>
-      <footer className="row-start-3 flex gap-6 flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="https://nextjs.org/icons/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="https://nextjs.org/icons/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="https://nextjs.org/icons/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
-    </div>
-  );
+      </div>
+    </React.Fragment>
+  )
 }

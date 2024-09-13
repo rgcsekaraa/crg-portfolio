@@ -14,8 +14,9 @@ const Summary = () => (
       Chandrasekaraa Ramadoss Ganesh
     </p>
     <span>
-      I know it’s a quite long name 😅 you can call me <strong>Chan</strong>
+      I know it&#39;s a quite long name 😅 you can call me <strong>Chan</strong>
     </span>
+
 
     <p className='text-xl text-Left font-medium text-slate-900 dark:text-slate-300'>
       IT Graduate | Full Stack Developer | Eager to Grow
@@ -224,7 +225,7 @@ const HonorsAndAwards = () => (
         Best Paper Award - Queensland University of Technology (Dec 2023)
       </h3>
       <p className='leading-relaxed max-w-3xl mx-auto'>
-        I was honored with the Best Paper Award for my project, "Guardify: An eBPF-Based Real-Time Defense Mechanism for Secure PyPi and Npm Package Installations." The project focused on creating a real-time security tool leveraging eBPF to monitor and defend against vulnerabilities in package installations. This research significantly improved security in software ecosystems such as PyPi and npm and was presented at the QUT annual technology conference, where it garnered recognition for its innovative and impactful approach.
+       I was honored with the Best Paper Award for my project, &quot;Guardify: An eBPF-Based Real-Time Defense Mechanism for Secure PyPi and Npm Package Installations.&quot;
       </p>
     </div>
 

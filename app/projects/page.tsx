@@ -4,6 +4,7 @@ import { WEB_APPS, TOOLS } from "@/data/projects";
 import { Input } from "@/components/ui/input";
 import { SocialLink } from "@/components/social-link";
 import { GitHubIcon, LinkIcon, YouTubeIcon } from "@/components/icons";
+import { FiChevronDown } from 'react-icons/fi';
 import Modal from "@/components/modal"; // Import the modal component
 import { DropdownMenu, DropdownMenuItem, DropdownMenuTrigger, DropdownMenuContent } from "@/components/ui/dropdown-menu";
 
@@ -58,8 +59,10 @@ export default function Projects() {
             <h2 className="text-xl font-bold">{selectedCategory}</h2>
             <DropdownMenu>
               <DropdownMenuTrigger asChild>
-                <button className="bg-gray-600 text-white px-4 py-2 rounded-lg">Select Category</button>
-              </DropdownMenuTrigger>
+  <button className='bg-gray-600 text-white px-4 py-2 rounded-lg flex items-center'>
+    <FiChevronDown className='text-white' />
+  </button>
+</DropdownMenuTrigger>
               <DropdownMenuContent className="w-full">
                 {categories.map((category) => (
                   <DropdownMenuItem

@@ -1,262 +1,252 @@
-'use client'
-import React, { useState, useRef, useEffect } from 'react'
-import { motion, AnimatePresence } from 'framer-motion'
+'use client';
+import React, { useState, useEffect, useRef } from 'react';
+import {
+  DropdownMenu,
+  DropdownMenuItem,
+  DropdownMenuTrigger,
+  DropdownMenuContent,
+} from '@/components/ui/dropdown-menu';
 
-const sections = {
-  summary: 'Summary',
-  experience: 'Experience',
-  education: 'Education',
-  skills: 'Skills',
-  certifications: 'Certifications',
-  awards: 'Honors & Awards',
-  status: 'Status'
-}
+// Section Components
+const Summary = () => (
+  <div>
+    <p className='mb-4 text-2xl font-bold'>
+      Chandrasekaraa Ramadoss Ganesh (He/Him)
+    </p>
+    <p className='mb-4 text-lg font-semibold'>
+      Recent IT Graduate | Eager Full Stack Developer | Seeking Opportunities in Software Development
+    </p>
+    <p className='text-justify leading-relaxed'>
+      As a recent Master of Information Technology graduate from QUT, my passion for software development has been channeled into creating impactful solutions, exemplified by my role at Trusted Networks Lab, where I spearheaded the development of a prototype tool hosted on AWS. My work at ClubSeeker further demonstrates my full-stack development skills, using the MERN stack to deliver a responsive PaaS platform that elevates club management experiences. My dedication to innovation and security in software is underscored by a Best Paper Award for my project "Guardify."
+    </p>
+  </div>
+);
 
-const details = {
-  summary: (
+const Experience = () => (
+  <div className='space-y-6'>
+    {/* Experience details */}
     <div>
-      <p className='mb-4 text-xl font-bold'>
-        Chandrasekaraa Ramadoss Ganesh (He/Him)
-      </p>
-      <p className='mb-4 font-semibold'>
-        Recent IT Graduate | Eager Full Stack Developer | Seeking Opportunities
-        in Software Development
-      </p>
-      <p>
-        As a recent Master of Information Technology graduate from QUT, my
-        passion for software development has been channeled into creating
-        impactful solutions, exemplified by my role at Trusted Networks Lab,
-        where I spearheaded the development of a prototype tool hosted on AWS.
-        My work at ClubSeeker further demonstrates my full-stack development
-        skills, using the MERN stack to deliver a responsive PaaS platform that
-        elevates club management experiences. My dedication to innovation and
-        security in software is underscored by a Best Paper Award for my project
-        "Guardify."
+      <h3 className='mb-2 text-xl font-bold'>
+        Software Engineer - LifeShape Clinic (April 2023 - Present)
+      </h3>
+      <p className='text-justify leading-relaxed'>
+        Details about the work done at LifeShape Clinic...
       </p>
     </div>
-  ),
-  experience: (
     <div>
-      <h3 className='mb-2 text-lg font-bold'>
-        Software Engineer - LIFESHAPE CLINIC (APRIL 2023 - PRESENT)
+      <h3 className='mb-2 text-xl font-bold'>
+        Research Development Software Engineer - Trusted Networks Lab, QUT (Nov 2023 - Jun 2024)
       </h3>
-      <p className='mb-4'>Details about the work done at LifeShape Clinic...</p>
-
-      <h3 className='mb-2 text-lg font-bold'>
-        Research Development Software Engineer - Trusted Networks Lab, QUT (NOV
-        2023 - JUN 2024)
-      </h3>
-      <p className='mb-4'>
+      <p className='text-justify leading-relaxed'>
         Details about the work done at Trusted Networks Lab...
       </p>
-
-      <h3 className='mb-2 text-lg font-bold'>
-        Full-stack Developer - ClubSeeker (FEB 2024 - MAR 2024)
-      </h3>
-      <p>Details about the work done at ClubSeeker...</p>
     </div>
-  ),
-  education: (
     <div>
-      <h3 className='mb-2 text-lg font-bold'>
+      <h3 className='mb-2 text-xl font-bold'>
+        Full-stack Developer - ClubSeeker (Feb 2024 - Mar 2024)
+      </h3>
+      <p className='text-justify leading-relaxed'>
+        Details about the work done at ClubSeeker...
+      </p>
+    </div>
+  </div>
+);
+
+const Education = () => (
+  <div className='space-y-6'>
+    <div>
+      <h3 className='mb-2 text-xl font-bold'>
         QUT (Queensland University of Technology)
       </h3>
-      <p className='mb-4'>
-        Master of Information Technology, Software Development (Jul 2022 - Jul
-        2024)
-      </p>
-
-      <h3 className='mb-2 text-lg font-bold'>Panimalar Engineering College</h3>
-      <p>
-        Bachelor of Engineering - BE, Computer Software Engineering (2014 -
-        2018)
+      <p className='leading-relaxed'>
+        Master of Information Technology, Software Development (Jul 2022 - Jul 2024)
       </p>
     </div>
-  ),
-  skills: (
     <div>
-      <h3 className='mb-2 text-lg font-bold'>Backend Development</h3>
-      <p className='mb-4'>
+      <h3 className='mb-2 text-xl font-bold'>Panimalar Engineering College</h3>
+      <p className='leading-relaxed'>
+        Bachelor of Engineering - BE, Computer Software Engineering (2014 - 2018)
+      </p>
+    </div>
+  </div>
+);
+
+const Skills = () => (
+  <div className='space-y-4'>
+    <div>
+      <h3 className='mb-2 text-xl font-bold'>Backend Development</h3>
+      <p className='leading-relaxed'>
         Python, Node.js, PHP, REST API, Laravel, Firebase, C#
       </p>
-      <h3 className='mb-2 text-lg font-bold'>Frontend Development</h3>
-      <p className='mb-4'>
-        React, Flutter, JavaScript, TypeScript, Bootstrap, Tailwind CSS, HTML,
-        CSS
-      </p>
-      <h3 className='mb-2 text-lg font-bold'>Machine Learning</h3>
-      <p className='mb-4'>
-        Python, Pandas, NumPy, Sci-kit learn, Huggingface, Large Language
-        Models, Natural Language Processing
-      </p>
-      <h3 className='mb-2 text-lg font-bold'>Other</h3>
-      <p>Git, GitHub, UI/UX, UML, WordPress, CI/CD, Cypress</p>
     </div>
-  ),
-  certifications: (
     <div>
-      <h3 className='mb-2 text-lg font-bold'>
+      <h3 className='mb-2 text-xl font-bold'>Frontend Development</h3>
+      <p className='leading-relaxed'>
+        React, Flutter, JavaScript, TypeScript, Bootstrap, Tailwind CSS, HTML, CSS
+      </p>
+    </div>
+    <div>
+      <h3 className='mb-2 text-xl font-bold'>Machine Learning</h3>
+      <p className='leading-relaxed'>
+        Python, Pandas, NumPy, Scikit-learn, Hugging Face, Large Language Models, Natural Language Processing
+      </p>
+    </div>
+    <div>
+      <h3 className='mb-2 text-xl font-bold'>Other</h3>
+      <p className='leading-relaxed'>
+        Git, GitHub, UI/UX, UML, WordPress, CI/CD, Cypress
+      </p>
+    </div>
+  </div>
+);
+
+const Certifications = () => (
+  <div className='space-y-6'>
+    <div>
+      <h3 className='mb-2 text-xl font-bold'>
         NDG Linux Essentials - Cisco Virtual Academy (Issued Jan 2024)
       </h3>
-      <p className='mb-4'>Linux Kernel</p>
-      <h3 className='mb-2 text-lg font-bold'>
+      <p className='leading-relaxed'>Linux Kernel</p>
+    </div>
+    <div>
+      <h3 className='mb-2 text-xl font-bold'>
         Programming with JavaScript - Coursera (Issued Jun 2023)
       </h3>
-      <p>Credential ID FUEV39E6W92L</p>
+      <p className='leading-relaxed'>Credential ID FUEV39E6W92L</p>
     </div>
-  ),
-  awards: (
-    <div>
-      <h3 className='mb-2 text-lg font-bold'>
-        Best Paper Award - Queensland University of Technology (Dec 2023)
-      </h3>
-      <p>
-        "Guardify: An eBPF-Based Real-Time Defense Mechanism for Secure PyPi and
-        Npm Package Installations"
-      </p>
-    </div>
-  ),
-  status: (
-    // i am on australian tr 485 visa and available immediately.
-    <div>
-      <p className='mb-4'>
-        I am on an Australian Temporary Graduate Visa (TR 485) and available
-        immediately.
-      </p>
-    </div>
-  )
-}
+  </div>
+);
+
+const HonorsAndAwards = () => (
+  <div>
+    <h3 className='mb-2 text-xl font-bold'>
+      Best Paper Award - Queensland University of Technology (Dec 2023)
+    </h3>
+    <p className='leading-relaxed'>
+      "Guardify: An eBPF-Based Real-Time Defense Mechanism for Secure PyPi and Npm Package Installations"
+    </p>
+  </div>
+);
+
+const Status = () => (
+  <div>
+    <p className='text-justify leading-relaxed'>
+      I am on an Australian Temporary Graduate Visa (TR 485) and available immediately.
+    </p>
+  </div>
+);
+
+// Mapping sections to components
+const sections = [
+  { name: 'Summary', component: <Summary /> },
+  { name: 'Experience', component: <Experience /> },
+  { name: 'Education', component: <Education /> },
+  { name: 'Skills', component: <Skills /> },
+  { name: 'Certifications', component: <Certifications /> },
+  { name: 'Honors & Awards', component: <HonorsAndAwards /> },
+  { name: 'Status', component: <Status /> },
+];
 
 export default function About() {
-  const [activeSection, setActiveSection] = useState('summary')
-  const [direction, setDirection] = useState(0)
-  const contentRef = useRef(null)
-  const scrollRef = useRef(null)
-  const sectionOrder = Object.keys(sections)
+  const [selectedSection, setSelectedSection] = useState('Summary');
+  const navRefs = useRef([]);
+
+  const handleSectionChange = (sectionName) => {
+    setSelectedSection(sectionName);
+  };
+
+  // Arrow key navigation
+  const handleKeyDown = (e) => {
+    const currentIndex = sections.findIndex(
+      (section) => section.name === selectedSection
+    );
+    if (e.key === 'ArrowRight') {
+      const nextIndex = (currentIndex + 1) % sections.length;
+      setSelectedSection(sections[nextIndex].name);
+    } else if (e.key === 'ArrowLeft') {
+      const prevIndex = (currentIndex - 1 + sections.length) % sections.length;
+      setSelectedSection(sections[prevIndex].name);
+    }
+  };
 
   useEffect(() => {
-    const handleScroll = () => {
-      if (scrollRef.current) clearTimeout(scrollRef.current)
-
-      scrollRef.current = setTimeout(() => {
-        const container = contentRef.current
-        if (!container) return
-
-        const scrollPosition = container.scrollTop
-        const containerHeight = container.clientHeight
-        const currentIndex = Math.round(scrollPosition / containerHeight)
-        const newSection = sectionOrder[currentIndex]
-
-        if (newSection !== activeSection) {
-          setDirection(
-            currentIndex > sectionOrder.indexOf(activeSection) ? 1 : -1
-          )
-          setActiveSection(newSection)
-        }
-      }, 10)
-    }
-
-    const container = contentRef.current
-    if (container) {
-      container.addEventListener('scroll', handleScroll)
-    }
-
+    window.addEventListener('keydown', handleKeyDown);
     return () => {
-      if (container) {
-        container.removeEventListener('scroll', handleScroll)
-      }
-      if (scrollRef.current) {
-        clearTimeout(scrollRef.current)
-      }
-    }
-  }, [activeSection, sectionOrder])
+      window.removeEventListener('keydown', handleKeyDown);
+    };
+  }, [selectedSection]);
 
-  useEffect(() => {
-    const container = contentRef.current
-    if (container) {
-      const index = sectionOrder.indexOf(activeSection)
-      container.scrollTo({
-        top: index * container.clientHeight,
-        behavior: 'smooth'
-      })
-    }
-  }, [activeSection, sectionOrder])
-
-  const handleSectionChange = newSection => {
-    const currentIndex = sectionOrder.indexOf(activeSection)
-    const newIndex = sectionOrder.indexOf(newSection)
-    setDirection(newIndex > currentIndex ? 1 : -1)
-    setActiveSection(newSection)
-  }
-
-  const variants = {
-    enter: direction => ({
-      y: direction > 0 ? '100%' : '-100%',
-      opacity: 0
-    }),
-    center: {
-      y: 0,
-      opacity: 1
-    },
-    exit: direction => ({
-      y: direction < 0 ? '100%' : '-100%',
-      opacity: 0
-    })
-  }
+  const currentSection = sections.find(
+    (section) => section.name === selectedSection
+  );
 
   return (
-    <div className='flex h-[70vh] flex-row'>
-      {/* Sidebar */}
-      <div className='w-1/3 overflow-y-auto p-4'>
-        <h1 className='mb-4 text-3xl font-bold'>My Profile</h1>
-        <ul className='space-y-4'>
-          {Object.entries(sections).map(([key, title]) => (
-            <li key={key}>
-              <button
-                onClick={() => handleSectionChange(key)}
-                className={`block w-full rounded-md px-4 py-2 text-left transition-colors hover:bg-gray-200 dark:hover:bg-gray-800 ${
-                  activeSection === key
-                    ? 'bg-black text-white dark:bg-white dark:text-black'
-                    : 'border border-black text-black dark:border-white dark:text-white'
-                }`}
-              >
-                {title}
-              </button>
-            </li>
-          ))}
-        </ul>
-      </div>
-
-      {/* Content Area */}
-      <div
-        className='w-2/3 snap-y snap-mandatory overflow-y-auto border-t border-gray-300 dark:border-gray-700 lg:border-l lg:border-t-0'
-        ref={contentRef}
-      >
-        {sectionOrder.map(section => (
-          <div key={section} className='h-full snap-start'>
-            <div className='h-full overflow-y-auto p-4'>
-              <AnimatePresence mode='wait' custom={direction}>
-                {activeSection === section && (
-                  <motion.div
-                    key={section}
-                    custom={direction}
-                    variants={variants}
-                    initial='enter'
-                    animate='center'
-                    exit='exit'
-                    transition={{
-                      y: { type: 'spring', stiffness: 300, damping: 30 },
-                      opacity: { duration: 0.2 }
-                    }}
-                  >
-                    {details[section]}
-                  </motion.div>
-                )}
-              </AnimatePresence>
+    
+    <div className='flex flex-col min-h-screen rounded-lg'>
+      {/* Navigation Bar */}
+      <nav className='bg-gray-200 dark:bg-slate-700 text-black dark:text-white px-4 lg:px-6 py-2 rounded-lg'>
+        <div className='flex justify-between items-center'>
+          {/* Mobile Dropdown Menu */}
+          <div className='block lg:hidden w-full'>
+            <div className='flex items-center justify-between'>
+              <h2 className='text-xl font-bold'>{selectedSection}</h2>
+              <DropdownMenu>
+                <DropdownMenuTrigger asChild>
+                  <button className='bg-gray-600 text-white px-4 py-2 rounded-lg'>
+                    Select Section
+                  </button>
+                </DropdownMenuTrigger>
+                <DropdownMenuContent className='w-full'>
+                  {sections.map(({ name }) => (
+                    <DropdownMenuItem
+                      key={name}
+                      onSelect={() => handleSectionChange(name)}
+                      className={`cursor-pointer px-4 py-2 rounded-lg ${
+                        selectedSection === name
+                          ? 'bg-gray-600 text-white'
+                          : 'dark:hover:bg-gray-700 hover:bg-gray-200'
+                      }`}
+                    >
+                      {name}
+                    </DropdownMenuItem>
+                  ))}
+                </DropdownMenuContent>
+              </DropdownMenu>
             </div>
           </div>
-        ))}
-      </div>
+
+          {/* Horizontal Navigation for Large Screens */}
+          <ul className="hidden lg:flex space-x-4 w-full justify-center items-center text-center">
+            {sections.map(({ name }, index) => (
+              <li
+                key={name}
+                ref={(el) => (navRefs.current[index] = el)}
+                className={`cursor-pointer px-3 py-2 rounded-3xl ${
+                  selectedSection === name
+                    ? 'bg-gray-700 text-white dark:bg-gray-500 dark:text-white'
+                    : 'hover:bg-gray-300 dark:hover:bg-gray-600'
+                }`}
+                onClick={() => handleSectionChange(name)}
+              >
+                {name}
+              </li>
+            ))}
+          </ul>
+          {/* Empty div to align the dropdown in the center */}
+          <div className='hidden lg:block w-16'></div>
+        </div>
+      </nav>
+
+      {/* Main Content */}
+      <main className='flex-1 p-4 lg:p-6 bg-gray-50 dark:bg-slate-900 text-black dark:text-white rounded-b-lg'>
+        <div className='flex justify-between items-center mb-6'>
+          <h2 className='text-2xl font-bold'>{selectedSection}</h2>
+        </div>
+
+        <div className='p-6 bg-white dark:bg-slate-800 rounded-lg shadow-md'>
+          {currentSection.component}
+        </div>
+      </main>
     </div>
-  )
+  );
 }

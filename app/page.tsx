@@ -69,32 +69,29 @@ export default function Home() {
           <div className='hidden w-[1px] bg-gray-200 dark:bg-gray-800 md:block'></div>
 
           {/* Right Column */}
-          <div className='text-gray-700 dark:text-gray-100'>
-            <p className='mt-6'>
-              I&rsquo;m a fullstack software engineer specializing in building
-              scalable web applications with rich user interfaces using
-              JavaScript.
+        <div className='text-gray-700 dark:text-gray-100'>
+            <p className='mt-6 text-lg font-semibold'>
+                I&rsquo;m a recent <span className='text-slate-500 dark:text-slate-400'>IT graduate</span> from <span className='text-slate-500 dark:text-slate-400'>QUT</span>, specializing in Software Development and full-stack technologies.
             </p>
-            <p className='mb-4 mt-4'>
-              Over the years, I&rsquo;ve worked on multiple startups, building
-              end-to-end products in the insurance, game-tech, and video
-              streaming domains. I have also actively contributed to various
-              open-source projects. Currently, I&rsquo;m focused on developing
-              iGaming solutions.
+            <p className='mt-4'>
+                Skilled in the <span className='font-medium text-slate-600 dark:text-slate-300'>MERN stack</span>, <span className='font-medium text-slate-600 dark:text-slate-300'>Python</span>, and cloud technologies like <span className='font-medium text-slate-600 dark:text-slate-300'>AWS</span> and <span className='font-medium text-slate-600 dark:text-slate-300'>Docker</span>, with knowledge gained through academic work and personal projects.
             </p>
+            <p className='mt-4'>
+                Currently practicing <span className='font-medium text-slate-600 dark:text-slate-300'>DSA</span>, I&rsquo;m a collaborative team player ready to contribute to innovative software development teams.
+            </p>
+            <p className='mt-4'>
+                If you have any <span className='text-slate-900 dark:text-slate-200'>job opportunities</span>, please&nbsp;
+                <a
+                    href='mailto:rgcsekaraa@gmail.com'
+                    className='inline-block border-b border-slate-500 dark:border-slate-400 text-slate-500 dark:text-slate-400 hover:text-slate-600 dark:hover:text-slate-300'
+                >
+                    send me an email
+                </a>
+                &nbsp;or connect with me through my social media profiles.
+            </p>
+        </div>
 
-            <p className='mb-4'>
-              If you&rsquo;d like to collaborate, please&nbsp;
-              <a
-                href='mailto:rgcsekaraa@gmail.com'
-                className='inline-block border-b'
-              >
-                send me an email
-              </a>
-              &nbsp;or reach out on any of my social handles.
-            </p>
-          </div>
-        </section>
+      </section>
 
         <div className='my-8 w-full border-t border-gray-200 dark:border-gray-800' />
 

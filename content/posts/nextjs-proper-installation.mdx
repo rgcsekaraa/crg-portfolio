@@ -1,0 +1,109 @@
+---
+title: "Proper way to install Next.js"
+summary: "A simple, step-by-step guide to installing the latest version of Next.js, including tips on choosing the best setup options. Perfect for beginners looking to build powerful React applications."
+author: 'Chandrasekaraa RG'
+category: 'Tutorial'
+publishedAt: '2024-09-13'
+---
+
+Hey there! 👋 Ready to start your Next.js adventure? Let's walk through the process step by step. Don't worry, we'll keep it super simple!
+
+## What You'll Need
+
+Before we begin, make sure you have:
+- A computer (obviously!)
+- Internet connection
+- Basic knowledge of using a command line or terminal
+
+## Step 1: Install Node.js
+
+Next.js needs Node.js to run. Here's how to get it:
+
+1. Go to the [Node.js website](https://nodejs.org/).
+2. Download the "LTS" (Long Term Support) version for your computer.
+3. Once downloaded, double-click the file and follow the installation wizard.
+
+## Step 2: Open Your Command Line
+
+- On Windows: Press Win + R, type "cmd", and hit Enter.
+- On Mac: Press Cmd + Space, type "terminal", and hit Enter.
+
+## Step 3: Create a New Project Folder
+
+1. In your command line, type:
+   ```
+   mkdir my-nextjs-app
+   cd my-nextjs-app
+   ```
+   This creates a new folder and moves you into it.
+
+## Step 4: Set Up Your Next.js Project
+
+Now for the exciting part! Type this command:
+
+```
+npx create-next-app@latest .
+```
+
+This magic command does a few things:
+- Downloads the latest version of Next.js
+- Sets up a new project in your current folder
+- Asks you some questions about your project setup
+
+## Step 5: Choosing the Best Setup Options
+
+During the setup, you'll be asked several questions. Let's go through each one:
+
+1. **Would you like to use TypeScript?**
+   - Choose 'Yes' if you want strong typing, which can help catch errors early.
+   - Choose 'No' if you prefer plain JavaScript or are new to programming.
+
+2. **Would you like to use ESLint?**
+   - It's recommended to choose 'Yes'. ESLint helps you write cleaner code.
+
+3. **Would you like to use Tailwind CSS?**
+   - Choose 'Yes' if you want a utility-first CSS framework (great for quick styling).
+   - Choose 'No' if you prefer writing your own CSS or using another styling method.
+
+4. **Would you like to use `src/` directory?**
+   - Choose 'Yes' for better organization, especially for larger projects.
+   - Choose 'No' for simpler projects or if you prefer a flatter structure.
+
+5. **Would you like to use App Router? (recommended)**
+   - It's recommended to choose 'Yes'. App Router is the latest routing system in Next.js.
+
+6. **Would you like to customize the default import alias?**
+   - Choose 'No' if you're a beginner. You can always set this up later.
+   - Choose 'Yes' if you want to customize how you import files (advanced).
+
+Remember, there's no "wrong" choice here. You can always modify these settings later!
+
+## Step 6: Start Your Next.js App
+
+Once everything is installed, type:
+
+```
+npm run dev
+```
+
+This starts your Next.js app in development mode.
+
+## Step 7: View Your New App
+
+Open your web browser and go to:
+
+```
+http://localhost:3000
+```
+
+You should see your new Next.js app running! 🎉
+
+## What's Next?
+
+Congratulations! You've just set up a Next.js project. Here are some next steps:
+
+1. Explore the files in your project folder.
+2. Check out the [Next.js documentation](https://nextjs.org/docs) to learn more.
+3. Start building your awesome web application!
+
+Remember, every expert was once a beginner. Take it one step at a time, and happy coding! 😊

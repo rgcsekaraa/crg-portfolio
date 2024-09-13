@@ -9,96 +9,167 @@ import {
 
 // Section Components
 const Summary = () => (
-  <div>
-    <p className='mb-4 text-2xl font-bold'>
-      Chandrasekaraa Ramadoss Ganesh (He/Him)
+  <div className='space-y-6'>
+    <p className='text-3xl font-extrabold text-left text-gray-800 dark:text-gray-100'>
+      Chandrasekaraa Ramadoss Ganesh
     </p>
-    <p className='mb-4 text-lg font-semibold'>
-      Recent IT Graduate | Eager Full Stack Developer | Seeking Opportunities in Software Development
+    <span>
+      I know it’s a quite long name 😅, you can call me <strong>Chan</strong>.
+    </span>
+
+    <p className='text-xl text-Left font-medium text-slate-900 dark:text-slate-300'>
+      IT Graduate | Full Stack Developer | Eager to Grow
     </p>
-    <p className='text-justify leading-relaxed'>
-      As a recent Master of Information Technology graduate from QUT, my passion for software development has been channeled into creating impactful solutions, exemplified by my role at Trusted Networks Lab, where I spearheaded the development of a prototype tool hosted on AWS. My work at ClubSeeker further demonstrates my full-stack development skills, using the MERN stack to deliver a responsive PaaS platform that elevates club management experiences. My dedication to innovation and security in software is underscored by a Best Paper Award for my project "Guardify."
-    </p>
+
+    <div className='flex flex-col items-center space-y-4'>
+      <p className='text-justify max-w-3xl leading-relaxed'>
+        <span className='font-bold text-gray-900 dark:text-gray-200'>Passionate Learner: </span> 
+        Recent IT graduate from QUT with a Master’s in Software Development, eager to apply my skills and grow in the field of full-stack development.
+      </p>
+
+      <p className='text-justify max-w-3xl leading-relaxed'>
+        <span className='font-bold text-gray-900 dark:text-gray-200'>Hands-On Skills: </span> 
+        Developed foundational skills in JavaScript (React, Node.js) and Python through academic projects. Experienced with AWS and Docker, ready to contribute effectively to development teams.
+      </p>
+
+      <p className='text-justify max-w-3xl leading-relaxed'>
+        <span className='font-bold text-gray-900 dark:text-gray-200'>Team-Oriented and Adaptive: </span> 
+        Known for quick learning and adaptability, with a strong ability to grasp new concepts and work collaboratively. Seeking opportunities in Australia to bring enthusiasm and a fresh perspective to a dynamic full-stack development role.
+      </p>
+    </div>
   </div>
 );
+
+
 
 const Experience = () => (
   <div className='space-y-6'>
     {/* Experience details */}
     <div>
       <h3 className='mb-2 text-xl font-bold'>
-        Software Engineer - LifeShape Clinic (April 2023 - Present)
+        Software Research Intern - Trusted Networks Lab, QUT (Nov 2023 - Jun 2024)
       </h3>
       <p className='text-justify leading-relaxed'>
-        Details about the work done at LifeShape Clinic...
+        Contributed to the development of a CLI-based prototype tool deployed on AWS. Leveraged eBPF to intercept system calls and gained significant Linux skills, enhancing proficiency in Linux environments and cloud-based solutions.
       </p>
     </div>
     <div>
       <h3 className='mb-2 text-xl font-bold'>
-        Research Development Software Engineer - Trusted Networks Lab, QUT (Nov 2023 - Jun 2024)
+        Lead Developer - Industry IT Project, QUT (March 2024 - Aug 2024)
       </h3>
       <p className='text-justify leading-relaxed'>
-        Details about the work done at Trusted Networks Lab...
+        Led a team of 5 in developing a Django-based bushfire monitoring system for client Orefox. Managed source code, resolved conflicts, and ensured smooth team collaboration. Successfully built a comprehensive dashboard with real-time map integration and alerts within 2 months, demonstrating strong project management and technical skills.
       </p>
     </div>
     <div>
       <h3 className='mb-2 text-xl font-bold'>
-        Full-stack Developer - ClubSeeker (Feb 2024 - Mar 2024)
+        Full-Stack Developer - ClubSeeker, Brisbane (Feb 2024 - Mar 2024)
       </h3>
       <p className='text-justify leading-relaxed'>
-        Details about the work done at ClubSeeker...
+        Built ClubSeeker MVP version 1.0 from scratch within 1 month, handling all aspects from development to deployment. Recommended by a QUT professor for a startup by QUT students. Managed the project independently and delivered a robust platform for club management.
       </p>
     </div>
+    <div>
+  <p>
+    <a 
+      href='/contact' 
+      className='font-extralight text-slate-600 hover:text-slate-800 dark:text-slate-400 dark:hover:text-slate-300'
+    >
+      ⦿ References available upon request 🤓
+    </a>
+  </p>
+</div>
+
   </div>
 );
+
 
 const Education = () => (
   <div className='space-y-6'>
-    <div>
-      <h3 className='mb-2 text-xl font-bold'>
+    {/* QUT Section */}
+    <div className='p-6 border border-gray-300 rounded-lg shadow-md bg-white dark:bg-gray-900'>
+      <h3 className='mb-2 text-2xl font-bold text-gray-800 dark:text-gray-100'>
         QUT (Queensland University of Technology)
+        <div>
+          <span className='text-lg font-extralight text-gray-700 dark:text-gray-300'>
+            Brisbane, Australia
+          </span>
+        </div>
       </h3>
-      <p className='leading-relaxed'>
-        Master of Information Technology, Software Development (Jul 2022 - Jul 2024)
+      <p className='text-xl text-gray-700 dark:text-gray-300'>
+        Master of Information Technology, Software Development
+      </p>
+      <p className='text-sm text-gray-500 dark:text-gray-400 mt-2'>
+        July 2022 - July 2024
       </p>
     </div>
-    <div>
-      <h3 className='mb-2 text-xl font-bold'>Panimalar Engineering College</h3>
-      <p className='leading-relaxed'>
-        Bachelor of Engineering - BE, Computer Software Engineering (2014 - 2018)
+
+    {/* Panimalar Engineering College Section */}
+    <div className='p-6 border border-gray-300 rounded-lg shadow-md bg-white dark:bg-gray-900'>
+      <h3 className='mb-2 text-2xl font-bold text-gray-800 dark:text-gray-100'>
+        Panimalar Engineering College
+        <div>
+          <span className='text-lg font-extralight text-gray-700 dark:text-gray-300'>
+            Chennai, India
+          </span>
+        </div>
+      </h3>
+      <p className='text-xl text-gray-700 dark:text-gray-300'>
+        Bachelor of Engineering - BE, Computer Software Engineering
+      </p>
+      <p className='text-sm text-gray-500 dark:text-gray-400 mt-2'>
+        2014 - 2020
       </p>
     </div>
   </div>
 );
 
+
+
 const Skills = () => (
-  <div className='space-y-4'>
+  <div className='space-y-6'>
+    {/* Industry Knowledge Section */}
     <div>
-      <h3 className='mb-2 text-xl font-bold'>Backend Development</h3>
-      <p className='leading-relaxed'>
-        Python, Node.js, PHP, REST API, Laravel, Firebase, C#
+      <h3 className='mb-2 text-2xl font-bold text-gray-800 dark:text-gray-100'>
+        Industry Knowledge
+      </h3>
+      <p className='leading-relaxed text-gray-700 dark:text-gray-300'>
+        Full-Stack Development, MERN Stack, Cloud Computing, Software Engineering, Agile Methodologies, REST APIs, eBPF.
       </p>
     </div>
+
+    {/* Tools & Technologies Section */}
     <div>
-      <h3 className='mb-2 text-xl font-bold'>Frontend Development</h3>
-      <p className='leading-relaxed'>
-        React, Flutter, JavaScript, TypeScript, Bootstrap, Tailwind CSS, HTML, CSS
+      <h3 className='mb-2 text-2xl font-bold text-gray-800 dark:text-gray-100'>
+        Tools & Technologies
+      </h3>
+      <p className='leading-relaxed text-gray-700 dark:text-gray-300'>
+        Python, Node.js, React, TypeScript, Docker, AWS, Django, MongoDB, MySQL, Git, GitHub, Postman, CI/CD, Tailwind CSS, HTML5, CSS3
       </p>
     </div>
+
+    {/* Interpersonal Skills Section */}
     <div>
-      <h3 className='mb-2 text-xl font-bold'>Machine Learning</h3>
-      <p className='leading-relaxed'>
-        Python, Pandas, NumPy, Scikit-learn, Hugging Face, Large Language Models, Natural Language Processing
+      <h3 className='mb-2 text-2xl font-bold text-gray-800 dark:text-gray-100'>
+        Interpersonal Skills
+      </h3>
+      <p className='leading-relaxed text-gray-700 dark:text-gray-300'>
+        Teamwork, Leadership, Fast Learner, Adaptability, Problem Solving, Communication, Multitasking
       </p>
     </div>
+
+    {/* Databases Section */}
     <div>
-      <h3 className='mb-2 text-xl font-bold'>Other</h3>
-      <p className='leading-relaxed'>
-        Git, GitHub, UI/UX, UML, WordPress, CI/CD, Cypress
+      <h3 className='mb-2 text-2xl font-bold text-gray-800 dark:text-gray-100'>
+        Databases
+      </h3>
+      <p className='leading-relaxed text-gray-700 dark:text-gray-300'>
+        MongoDB, MySQL, SQLite
       </p>
     </div>
   </div>
 );
+
 
 const Certifications = () => (
   <div className='space-y-6'>
@@ -240,7 +311,7 @@ export default function About() {
       {/* Main Content */}
       <main className='flex-1 p-4 lg:p-6 bg-gray-50 dark:bg-slate-900 text-black dark:text-white rounded-b-lg'>
         <div className='flex justify-between items-center mb-6'>
-          <h2 className='text-2xl font-bold'>{selectedSection}</h2>
+          <h2 className='text-2xl font-bold'>My {selectedSection}</h2>
         </div>
 
         <div className='p-6 bg-white dark:bg-slate-800 rounded-lg shadow-md'>

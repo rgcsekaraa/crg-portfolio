@@ -1,0 +1,55 @@
+---
+  title: "Time Complexity vs. Space Complexity: A Beginner's Guide"
+  summary: "Learn the difference between time complexity and space complexity in a simple, easy-to-understand way."
+  image: /images/posts/time-vs-space-complexity.webp
+  author: 'Chandrasekaraa RG'
+  category: 'DSA'
+  publishedAt: '2024-09-13'
+---
+
+When you're learning Data Structures and Algorithms (DSA), two important concepts you’ll hear a lot about are **time complexity** and **space complexity**. But what do they actually mean? Let's break it down in a super simple way.
+
+## Time Complexity: How Long Does It Take?
+
+Think of time complexity as **how much time an algorithm needs to run** based on the size of the input. If you had to search for a book in a library, the time complexity would represent how long it takes you to find the book, depending on how many books there are.
+
+- **Example**: Let’s say you have a list of 10 names, and you want to find one specific name. If you check every name one by one, you’ll have to look at up to 10 names. This is called **O(n)**, where **n** is the number of names.
+- If you have 100 names, the time increases, and you’ll need to look at up to 100 names.
+
+Basically, **time complexity** helps you estimate how fast (or slow) your algorithm will be as the amount of data grows.
+
+### Types of Time Complexity:
+- **O(1)**: Constant time. No matter how much data you have, the algorithm takes the same time.
+- **O(n)**: Linear time. The time grows as the data grows.
+- **O(n^2)**: Quadratic time. For every new item, the time grows even faster (like double loops).
+
+## Space Complexity: How Much Memory Does It Use?
+
+Space complexity, on the other hand, is about **how much memory your algorithm needs**. It’s like asking, "How many bookshelves do you need to store all the books?"
+
+- **Example**: Let’s say you’re solving a problem, and you need to store a list of names. The more names you have, the more space (memory) you’ll need to store that list.
+- If you create extra lists or variables while solving a problem, that also takes up more space.
+
+### Types of Space Complexity:
+- **O(1)**: Constant space. Your algorithm uses the same amount of memory no matter how much data there is.
+- **O(n)**: Linear space. The memory you need grows as your data grows.
+
+## In Simple Terms
+
+- **Time complexity** = How long it takes to finish.
+- **Space complexity** = How much memory it needs to finish.
+
+### A Quick Example
+
+Let’s say you're sorting a deck of cards. 
+
+- **Time complexity** is about how many steps it takes to sort the cards. The more cards, the longer it will take.
+- **Space complexity** is about how many extra tables you need to spread out the cards while you’re sorting them.
+
+## Why Does It Matter?
+
+When you're writing code, you want it to be **efficient**. That means you don’t want your code to take forever to run (time complexity), and you don’t want it to use up too much memory (space complexity). Finding the right balance between these two can make your program run faster and use less memory, which is super important for big data sets or apps that need to run quickly.
+
+## Conclusion
+
+Both time complexity and space complexity are important when solving problems. While time complexity focuses on how fast your algorithm runs, space complexity is all about how much memory it uses. Understanding these concepts helps you write better, more efficient code as you grow in your DSA journey!

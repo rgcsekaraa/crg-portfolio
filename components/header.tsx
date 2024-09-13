@@ -37,6 +37,8 @@ export function Header() {
     setIsMenuOpen(!isMenuOpen)
   }
 
+  const isHomePage = pathname === '/'
+
   return (
     <header className='mb-10 mt-10 tracking-tight'>
       <div className='lg:sticky lg:top-20'>
@@ -60,7 +62,17 @@ export function Header() {
 
               {/* Original Desktop Menu (Hidden on mobile screens) */}
               <div className='hidden w-full flex-row items-center justify-center lg:flex'>
-                <div className='flex space-x-4'>
+                <div className='flex space-x-4 items-center'>
+                  {/* Conditionally render the image next to the Home link, but not on the Home page */}
+                  {!isHomePage && (
+                    <Link href='/' className='flex items-center'>
+                      <img
+                        src='/_static/me.png' // Replace with your actual image path
+                        alt='Chandrasekaraa RG'
+                        className='h-9 w-9 rounded-full object-cover'
+                      />
+                    </Link>
+                  )}
                   {Object.entries(navItems).map(([path, { name }]) => {
                     const isActive = path === pathname
                     return (

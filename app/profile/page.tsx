@@ -14,7 +14,7 @@ const Summary = () => (
       Chandrasekaraa Ramadoss Ganesh
     </p>
     <span>
-      I know it’s a quite long name 😅, you can call me <strong>Chan</strong>.
+      I know it’s a quite long name 😅 you can call me <strong>Chan</strong>
     </span>
 
     <p className='text-xl text-Left font-medium text-slate-900 dark:text-slate-300'>
@@ -173,39 +173,127 @@ const Skills = () => (
 
 const Certifications = () => (
   <div className='space-y-6'>
-    <div>
-      <h3 className='mb-2 text-xl font-bold'>
-        NDG Linux Essentials - Cisco Virtual Academy (Issued Jan 2024)
+    {/* Certification 1 */}
+    <div className='p-4 border border-gray-300 rounded-lg shadow-md bg-white dark:bg-gray-900'>
+      <h3 className='mb-2 text-xl font-bold text-gray-800 dark:text-gray-100'>
+        NDG Linux Essentials
       </h3>
-      <p className='leading-relaxed'>Linux Kernel</p>
+      <p className='text-md text-gray-600 dark:text-gray-400'>
+        Cisco Virtual Academy
+      </p>
+      <p className='text-sm text-gray-500 dark:text-gray-400 mt-1'>
+        Issued: January 2024
+      </p>
+      <p className='text-md mt-2 text-gray-700 dark:text-gray-300'>
+        Linux Kernel
+      </p>
     </div>
-    <div>
-      <h3 className='mb-2 text-xl font-bold'>
-        Programming with JavaScript - Coursera (Issued Jun 2023)
+
+    {/* Certification 2 */}
+    <div className='p-4 border border-gray-300 rounded-lg shadow-md bg-white dark:bg-gray-900'>
+      <h3 className='mb-2 text-xl font-bold text-gray-800 dark:text-gray-100'>
+        Programming with JavaScript
       </h3>
-      <p className='leading-relaxed'>Credential ID FUEV39E6W92L</p>
+      <p className='text-md text-gray-600 dark:text-gray-400'>
+        Coursera
+      </p>
+      <p className='text-sm text-gray-500 dark:text-gray-400 mt-1'>
+        Issued: June 2023
+      </p>
+      <p className='text-sm text-gray-500 dark:text-gray-400'>
+        Credential ID: FUEV39E6W92L
+      </p>
     </div>
   </div>
 );
 
 const HonorsAndAwards = () => (
-  <div>
-    <h3 className='mb-2 text-xl font-bold'>
-      Best Paper Award - Queensland University of Technology (Dec 2023)
-    </h3>
-    <p className='leading-relaxed'>
-      "Guardify: An eBPF-Based Real-Time Defense Mechanism for Secure PyPi and Npm Package Installations"
-    </p>
+  <div className='space-y-6'>
+    {/* Cover Image Section */}
+    <div className='w-full h-60 overflow-hidden rounded-lg shadow-md'>
+      <img
+        src='/_static/docs/1701064565603.png'
+        alt='Best Paper Award Cover'
+        className='w-full h-full object-cover'
+      />
+    </div>
+
+    {/* Description Section */}
+    <div className='text-center'>
+      <h3 className='mb-2 text-2xl font-bold'>
+        Best Paper Award - Queensland University of Technology (Dec 2023)
+      </h3>
+      <p className='leading-relaxed max-w-3xl mx-auto'>
+        I was honored with the Best Paper Award for my project, "Guardify: An eBPF-Based Real-Time Defense Mechanism for Secure PyPi and Npm Package Installations." The project focused on creating a real-time security tool leveraging eBPF to monitor and defend against vulnerabilities in package installations. This research significantly improved security in software ecosystems such as PyPi and npm and was presented at the QUT annual technology conference, where it garnered recognition for its innovative and impactful approach.
+      </p>
+    </div>
+
+    {/* PDF Download Section */}
+    <div className='flex justify-center'>
+      <a
+        href='/_static/docs/1701934996222.pdf'
+        target='_blank'
+        rel='noopener noreferrer'
+        className='inline-block mt-4 px-3 py-1 text-white bg-slate-600 rounded-lg hover:bg-slate-700 dark:bg-slate-500 dark:hover:bg-slate-600'
+      >
+        View Certificate (PDF)
+      </a>
+    </div>
   </div>
 );
 
+
+const TickIcon = () => (
+  <svg
+    className='w-6 h-6 text-green-600'
+    fill='none'
+    stroke='currentColor'
+    strokeWidth='2'
+    viewBox='0 0 24 24'
+    xmlns='http://www.w3.org/2000/svg'
+  >
+    <path strokeLinecap='round' strokeLinejoin='round' d='M9 12l2 2l4-4' />
+  </svg>
+);
+
 const Status = () => (
-  <div>
-    <p className='text-justify leading-relaxed'>
-      I am on an Australian Temporary Graduate Visa (TR 485) and available immediately.
-    </p>
+  <div className='space-y-4'>
+    <h3 className='text-xl font-bold text-gray-800 dark:text-gray-100'>
+      Visa Status & Availability
+    </h3>
+
+    {/* Small Card 1 */}
+    <div className='p-4 border border-gray-300 rounded-lg shadow-md bg-white dark:bg-gray-900 flex items-center space-x-3'>
+      <TickIcon />
+      <p className='text-gray-700 dark:text-gray-300'>
+        Holding an Australian Temporary Graduate Visa (TR 485).
+      </p>
+    </div>
+
+    {/* Small Card 2 */}
+    <div className='p-4 border border-gray-300 rounded-lg shadow-md bg-white dark:bg-gray-900 flex items-center space-x-3'>
+      <TickIcon />
+      <p className='text-gray-700 dark:text-gray-300'>
+        Available to start immediately.
+      </p>
+    </div>
+
+    {/* Small Card 3 */}
+    <div className='p-4 border border-gray-300 rounded-lg shadow-md bg-white dark:bg-gray-900 flex items-center space-x-3'>
+      <TickIcon />
+      <p className='text-gray-700 dark:text-gray-300'>
+        Open to relocating within Australia for the right opportunity.
+      </p>
+    </div>
   </div>
 );
+
+
+
+
+
+
+
 
 // Mapping sections to components
 const sections = [

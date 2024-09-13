@@ -6,6 +6,7 @@ import {
   DropdownMenuTrigger,
   DropdownMenuContent,
 } from '@/components/ui/dropdown-menu';
+import Image from 'next/image';
 
 // Section Components
 const Summary = () => (
@@ -212,7 +213,7 @@ const HonorsAndAwards = () => (
   <div className='space-y-6'>
     {/* Cover Image Section */}
     <div className='w-full h-60 overflow-hidden rounded-lg shadow-md'>
-      <img
+      <Image
         src='/_static/docs/1701064565603.png'
         alt='Best Paper Award Cover'
         className='w-full h-full object-cover'

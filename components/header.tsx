@@ -5,6 +5,7 @@ import Link from 'next/link'
 import { LayoutGroup } from 'framer-motion'
 import { cn } from '@/lib/utils'
 import { ThemeToggler } from './theme-toggle'
+import Image from 'next/image'
 import React, { useState } from 'react'
 import { HiMenu, HiX } from 'react-icons/hi' // Import icons for the hamburger menu
 
@@ -66,7 +67,7 @@ export function Header() {
                   {/* Conditionally render the image next to the Home link, but not on the Home page */}
                   {!isHomePage && (
                     <Link href='/' className='flex items-center'>
-                      <img
+                      <Image
                         src='/_static/me.png' // Replace with your actual image path
                         alt='Chandrasekaraa RG'
                         className='h-9 w-9 rounded-full object-cover'

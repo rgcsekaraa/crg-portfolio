@@ -312,7 +312,7 @@ const sections = [
 
 export default function About() {
   const [selectedSection, setSelectedSection] = useState('Summary');
-  const navRefs = useRef([]);
+  const navRefs = useRef<(HTMLLIElement | null)[]>([]);
 
   const handleSectionChange = (sectionName: string) => {
     setSelectedSection(sectionName);

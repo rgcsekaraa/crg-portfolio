@@ -94,7 +94,7 @@ export default function Component() {
 };
 
   const validateStep = () => {
-    let stepErrors: Record<string, string> = {}
+    const stepErrors: Record<string, string> = {}
 
     try {
       switch (step) {

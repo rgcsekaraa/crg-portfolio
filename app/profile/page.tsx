@@ -382,16 +382,18 @@ export default function About() {
           <ul className="hidden lg:flex space-x-4 w-full justify-center items-center text-center">
             {sections.map(({ name }, index) => (
               <li
-                key={name}
-                ref={(el) => (navRefs.current[index] = el)}
-                className={`cursor-pointer px-3 py-2 rounded-3xl ${
-                  selectedSection === name
-                    ? 'bg-gray-700 text-white dark:bg-gray-500 dark:text-white'
-                    : 'hover:bg-gray-300 dark:hover:bg-gray-600'
-                }`}
-                onClick={() => handleSectionChange(name)}
-              >
-                {name}
+                  key={name}
+                  ref={(el) => {
+                    navRefs.current[index] = el;
+                  }}
+                  className={`cursor-pointer px-3 py-2 rounded-3xl ${
+                    selectedSection === name
+                      ? 'bg-gray-700 text-white dark:bg-gray-500 dark:text-white'
+                      : 'hover:bg-gray-300 dark:hover:bg-gray-600'
+                  }`}
+                  onClick={() => handleSectionChange(name)}
+                >
+                  {name}
               </li>
             ))}
           </ul>

@@ -4,6 +4,7 @@ import { SocialLink } from '@/components/social-link'
 import React from 'react'
 import { LINKS } from '@/lib/constants'
 import RecentPosts from '@/components/recent-posts'
+import Link from 'next/link'
 
 export default function Home() {
   return (
@@ -81,13 +82,14 @@ export default function Home() {
             </p>
             <p className='mt-4'>
                 If you have any <span className='text-slate-900 dark:text-slate-200'>job opportunities</span>, please&nbsp;
-                <a
-                    href='mailto:rgcsekaraa@gmail.com'
-                    className='inline-block border-b border-slate-500 dark:border-slate-400 text-slate-500 dark:text-slate-400 hover:text-slate-600 dark:hover:text-slate-300'
-                >
-                    send me an email
-                </a>
+              <Link
+                href='/contact'
+                className='inline-block border-b border-slate-500 dark:border-slate-400 text-slate-500 dark:text-slate-400 hover:text-slate-600 dark:hover:text-slate-300'
+              >
+                send me an email
+              </Link>
                 &nbsp;or connect with me through my social media profiles.
+              
             </p>
         </div>
 

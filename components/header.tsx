@@ -68,9 +68,11 @@ export function Header() {
                   {!isHomePage && (
                     <Link href='/' className='flex items-center'>
                       <Image
-                        src='/_static/me.png' // Replace with your actual image path
+                        src='/_static/me.png' 
+                        width={36}
+                        height={36}
                         alt='Chandrasekaraa RG'
-                        className='h-9 w-9 rounded-full object-cover'
+                        className='rounded-full object-cover'
                       />
                     </Link>
                   )}

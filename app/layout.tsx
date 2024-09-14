@@ -6,6 +6,7 @@ import { Header } from '@/components/header'
 import { Footer } from '@/components/footer'
 import { Space_Grotesk } from 'next/font/google'
 import { siteMetadata } from '@/data/siteMetadata'
+import 'react-toastify/dist/ReactToastify.css';
 import Head from './head'
 
 const space_grotesk = Space_Grotesk({

@@ -59,23 +59,25 @@ export default function RootLayout({
       <Head />
       <body
         className={cn(
-          'mx-auto min-h-screen max-w-4xl antialiased dark:border-slate-950 dark:text-gray-100',
+          'min-h-screen antialiased dark:border-slate-950 dark:text-gray-100',
           space_grotesk.className
         )}
       >
         <ThemeProvider
           attribute='class'
-          defaultTheme='light' // default to dark mode, can be light, dark, system
+          defaultTheme='light'
           enableSystem
           disableTransitionOnChange
         >
-        <main className="flex flex-col min-h-screen">
-        <Header />
-        <div className="flex-grow mx-4 px-2 md:px-0 lg:mx-auto">
-          {children}
-        </div>
-        <Footer />
-      </main>
+          <main className="flex flex-col min-h-screen">
+            <Header />
+            <div className="flex-grow px-4 md:px-0">
+              <div className="max-w-4xl mx-auto">
+                {children}
+              </div>
+            </div>
+            <Footer />
+          </main>
         </ThemeProvider>
       </body>
     </html>

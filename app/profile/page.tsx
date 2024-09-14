@@ -409,7 +409,7 @@ export default function About() {
         </div>
 
         <div className='p-6 bg-white dark:bg-slate-800 rounded-lg shadow-md'>
-          {currentSection.component}
+          {currentSection ? currentSection.component : <p>Section not found</p>}
         </div>
       </main>
     </div>

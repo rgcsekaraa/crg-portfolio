@@ -39,7 +39,7 @@ export default function Projects() {
     project.title.toLowerCase().includes(searchTerm.toLowerCase())
   );
 
-  const openModal = (project) => {
+  const openModal = (project: Record<string, any>) => {
     setSelectedProject(project);
     setIsModalOpen(true);
   };

@@ -212,7 +212,7 @@ const Certifications = () => (
 const HonorsAndAwards = () => (
   <div className='space-y-6'>
     {/* Cover Image Section */}
-    <div className='w-full h-60 overflow-hidden rounded-lg shadow-md'>
+    <div className='w-full overflow-hidden rounded-lg shadow-md'>
       <Image
         src='/_static/docs/1701064565603.png'
         width={500}

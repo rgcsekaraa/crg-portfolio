@@ -58,6 +58,20 @@ export function Header() {
                 >
                   <HiMenu className='text-gray-900 dark:text-white' />
                 </button>
+                {/* Circle Image in Center for Mobile (Hidden on Homepage) */}
+                {!isHomePage && (
+                  <div className='absolute left-1/2 transform -translate-x-1/2'>
+                    <Link href='/'>
+                      <Image
+                        src='/_static/me.png' // Add your image path here
+                        width={40}
+                        height={40}
+                        alt='Chandrasekaraa RG'
+                        className='rounded-full object-cover'
+                      />
+                    </Link>
+                  </div>
+                )}
                 <ThemeToggler />
               </div>
 
@@ -68,7 +82,7 @@ export function Header() {
                   {!isHomePage && (
                     <Link href='/' className='flex items-center'>
                       <Image
-                        src='/_static/me.png' 
+                        src='/_static/me.png'
                         width={36}
                         height={36}
                         alt='Chandrasekaraa RG'

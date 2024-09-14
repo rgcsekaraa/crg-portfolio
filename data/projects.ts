@@ -31,7 +31,9 @@ export const WEB_APPS = [
     status: 'In Progress',
     complexity: 'Low',
     lastUpdated: '2024-09-10',
+    video: 'https://www.youtube.com/watch?v=3QJ1Jr6l3ZQ',
     frontend: ['React', 'Typescript'],
+    liveDemo: null,
     backend: ['Nodejs', 'PostgreSQL'],
     license: 'GPL',
     features: ['Q&A Forum', 'Upvote System', 'User Profiles']
@@ -46,10 +48,12 @@ export const WEB_APPS = [
     tags: ['Next.js', 'Next Auth', 'Prisma', 'Docker', 'Chakra UI'],
     status: 'Completed',
     complexity: 'High',
+    video: 'https://www.youtube.com/watch?v=3QJ1Jr6l3ZQ',
     frontend: ['Next.js', 'Chakra UI'],
     backend: ['Next Auth', 'Prisma'],
     devOps: ['Docker'],
     lastUpdated: '2024-08-01',
+    liveDemo: null,
     license: 'MIT',
     features: [
       'AES256 Encryption', 
@@ -65,11 +69,13 @@ export const WEB_APPS = [
       'In-browser IDE for running, collaborating, and saving code snippets. Supports 10+ languages and multiple real-time collaboration features.',
     tags: ['Typescript', 'React', 'Nodejs', 'MongoDB', 'Socket'],
     status: 'Beta',
+    video: 'https://www.youtube.com/watch?v=3QJ1Jr6l3ZQ',
     complexity: 'High',
     frontend: ['React', 'Typescript'],
     backend: ['Nodejs', 'MongoDB'],
     devOps: ['Docker'],
     lastUpdated: '2024-07-15',
+    liveDemo: null,
     license: 'GPL',
     features: [
       'Real-time Collaboration', 
@@ -86,7 +92,9 @@ export const WEB_APPS = [
     tags: ['Node.js', 'Express', 'Ejs', 'MongoDB'],
     status: 'Completed',
     complexity: 'Medium',
+    video: 'https://www.youtube.com/watch?v=3QJ1Jr6l3ZQ',
     frontend: ['Ejs'],
+    liveDemo: null,
     backend: ['Node.js', 'MongoDB'],
     lastUpdated: '2024-06-21',
     license: 'Apache 2.0',
@@ -105,7 +113,9 @@ export const WEB_APPS = [
     tags: ['Node.js', 'Express', 'Ejs', 'MongoDB'],
     status: 'In Progress',
     complexity: 'Medium',
+    video: 'https://www.youtube.com/watch?v=3QJ1Jr6l3ZQ',
     frontend: ['Ejs'],
+    liveDemo: null,
     backend: ['Node.js', 'MongoDB'],
     lastUpdated: '2024-05-10',
     license: 'MIT',
@@ -124,9 +134,11 @@ export const WEB_APPS = [
     tags: ['Php', 'MySQL', 'Aws'],
     status: 'Completed',
     complexity: 'High',
+    video: 'https://www.youtube.com/watch?v=3QJ1Jr6l3ZQ',
     frontend: ['Php'],
     backend: ['MySQL'],
     devOps: ['Aws'],
+    liveDemo: null,
     lastUpdated: '2024-01-01',
     license: 'GPL',
     features: [
@@ -143,10 +155,12 @@ export const TOOLS = [
     title: 'states-nepal',
     repo: 'https://github.com/adarshaacharya/states-nepal',
     external: 'https://www.npmjs.com/package/states-nepal',
+    video: 'https://www.youtube.com/watch?v=3QJ1Jr6l3ZQ',
     description:
       'npm package to get the dataset about different administrative division of Nepal.',
     techs: ['npm-package'],
     status: 'Completed',
+    liveDemo: null,
     lastUpdated: '2024-04-15',
     license: 'MIT'
   },
@@ -154,9 +168,11 @@ export const TOOLS = [
     title: 'aaja (आज)',
     repo: 'https://github.com/adarshaacharya/aaja',
     external: 'https://www.npmjs.com/package/aaja',
+    video: 'https://www.youtube.com/watch?v=3QJ1Jr6l3ZQ',
     description:
       "CLI tool to get today's Nepali date, tithi, public events, and current time.",
     techs: ['npm-package'],
+    liveDemo: null,
     status: 'Completed',
     lastUpdated: '2024-06-10',
     license: 'MIT'
@@ -164,12 +180,14 @@ export const TOOLS = [
   {
     title: 'ApiHub',
     repo: 'https://github.com/adarshaacharya/ApiHub',
+    video: 'https://www.youtube.com/watch?v=3QJ1Jr6l3ZQ',
     external:
       'https://marketplace.visualstudio.com/items?itemName=AadarshaAcharya.api-hub',
     description:
       'VS Code extension to get free third-party API URLs on different categories.',
     techs: ['vscode-extension'],
     status: 'Completed',
+    liveDemo: null,
     lastUpdated: '2024-02-28',
     license: 'Apache 2.0'
   },
@@ -179,7 +197,9 @@ export const TOOLS = [
     external: 'https://www.npmjs.com/package/shitcommits',
     description: 'CLI tool to make git commits with not-so-perfect messages.',
     techs: ['npm-package'],
+    video: 'https://www.youtube.com/watch?v=3QJ1Jr6l3ZQ',
     status: 'Completed',
+    liveDemo: null,
     lastUpdated: '2024-03-22',
     license: 'GPL'
   }

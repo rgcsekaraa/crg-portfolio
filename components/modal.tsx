@@ -1,7 +1,31 @@
 import React from "react";
 import { GitHubIcon, LinkIcon, YouTubeIcon } from "@/components/icons";
 
-const Modal = ({ isOpen, onClose, project }) => {
+// Define the types for project and modal props
+interface Project {
+  title: string;
+  status?: string;
+  repo?: string;
+  video?: string;
+  external?: string;
+  description?: string;
+  tags?: string[];
+  features?: string[];
+  frontend?: string[];
+  backend?: string[];
+  devOps?: string[];
+  complexity?: string;
+  lastUpdated?: string;
+  license?: string;
+}
+
+interface ModalProps {
+  isOpen: boolean;
+  onClose: () => void;
+  project: Project | null;
+}
+
+const Modal: React.FC<ModalProps> = ({ isOpen, onClose, project }) => {
   if (!isOpen || !project) return null;
 
   return (

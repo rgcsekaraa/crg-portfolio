@@ -13,9 +13,9 @@ export default function PostsWithSearch({ posts }: { posts: PostMetadata[] }) {
   const [selectedCategory, setSelectedCategory] = useState('All')
 
   // Extract unique categories from posts and exclude empty categories
-  const categories = ['All', ...new Set(posts
-    .map(post => post.category)
-    .filter(category => category && category.trim() !== ''))]
+  const categories = ['All', ...Array.from(new Set(posts
+  .map(post => post.category)
+  .filter(category => category && category.trim() !== '')))]
 
   // Filter posts based on search query and selected category
   const filtered = posts.filter(post => {
@@ -60,7 +60,7 @@ export default function PostsWithSearch({ posts }: { posts: PostMetadata[] }) {
         {categories.map((category) => (
           <button
             key={category}
-            onClick={() => setSelectedCategory(category)}
+            onClick={() => setSelectedCategory(category || 'All')}
             className={`px-3 py-0 rounded-sm border transition-all duration-200 ${
               selectedCategory === category
                 ? 'bg-gray-700 text-white border-gray-500 dark:bg-gray-500 dark:border-gray-400'

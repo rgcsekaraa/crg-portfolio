@@ -24,7 +24,7 @@ export default function Projects() {
   const [selectedProject, setSelectedProject] = useState(null);
   const [isModalOpen, setIsModalOpen] = useState(false);
 
-  const filterProjects = (category) => {
+  const filterProjects = (category: string) => {
     switch (category) {
       case "Web Apps":
         return WEB_APPS;

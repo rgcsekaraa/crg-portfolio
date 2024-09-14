@@ -142,7 +142,7 @@ export default function Projects() {
                 />
                 {project.external && (
                   <SocialLink
-                    href={project.external}
+                    href={project.external ?? "#"}
                     className="h-6 w-6"
                     icon={LinkIcon}
                   />

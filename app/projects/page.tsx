@@ -110,7 +110,7 @@ export default function Projects() {
             >
               <div>
                 <div className="flex items-center justify-between mb-2">
-                  <h3 className="text-xl font-semibold cursor-pointer hover:text-blue-500">{project.title}</h3>
+                  <h3 className="text-xl font-semibold cursor-pointer hover:text-blue-500 transition ease-in">{project.title}</h3>
                   {project.status && (
                     <span
                       className={`px-2 py-1 text-sm rounded-2xl ${

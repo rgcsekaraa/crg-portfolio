@@ -1,13 +1,12 @@
 'use client';
-import React, { useState } from "react";
-import { ALL_PROJECTS} from "@/data/projects";
+import React, { useState, useEffect } from "react";
+import { ALL_PROJECTS } from "@/data/projects";
 import { Input } from "@/components/ui/input";
 import { SocialLink } from "@/components/social-link";
 import { GitHubIcon, LinkIcon, YouTubeIcon } from "@/components/icons";
 import { FiChevronDown } from 'react-icons/fi';
 import Modal from "@/components/modal"; // Import the modal component
 import { DropdownMenu, DropdownMenuItem, DropdownMenuTrigger, DropdownMenuContent } from "@/components/ui/dropdown-menu";
-
 
 const categories = [
   "Web Apps",
@@ -26,9 +25,8 @@ export default function Projects() {
   const [isModalOpen, setIsModalOpen] = useState(false);
 
   const filterProjects = (category: string) => {
-  return ALL_PROJECTS.filter((project) => project.category === category);
-};
-
+    return ALL_PROJECTS.filter((project) => project.category === category);
+  };
 
   const filteredProjects = filterProjects(selectedCategory).filter((project) =>
     project.title.toLowerCase().includes(searchTerm.toLowerCase())
@@ -44,9 +42,29 @@ export default function Projects() {
     setIsModalOpen(false);
   };
 
+  // UseEffect to listen for 'Escape' key press to close the modal
+  useEffect(() => {
+    const handleKeyDown = (event: KeyboardEvent) => {
+      if (event.key === "Escape") {
+        closeModal();
+      }
+    };
+
+    if (isModalOpen) {
+      window.addEventListener("keydown", handleKeyDown);
+    } else {
+      window.removeEventListener("keydown", handleKeyDown);
+    }
+
+    // Cleanup the event listener on component unmount
+    return () => {
+      window.removeEventListener("keydown", handleKeyDown);
+    };
+  }, [isModalOpen]);
+
   return (
     <div className="flex flex-col lg:flex-row min-h-screen rounded-lg">
-      <aside className="w-full lg:w-1/4 bg-gray-100 dark:bg-slate-800  text-black dark:text-white p-4 lg:p-6 lg:min-h-screen rounded-l-lg">
+      <aside className="w-full lg:w-1/4 bg-gray-100 dark:bg-slate-800 text-black dark:text-white p-4 lg:p-6 lg:min-h-screen rounded-l-lg">
         <h2 className="text-3xl font-semibold mb-6 hidden lg:block">Categories</h2>
 
         <div className="block lg:hidden mt-2 mb-2">
@@ -54,10 +72,10 @@ export default function Projects() {
             <h2 className="text-xl font-bold">{selectedCategory}</h2>
             <DropdownMenu>
               <DropdownMenuTrigger asChild>
-  <button className='bg-gray-600 text-white px-4 py-2 rounded-lg flex items-center'>
-    <FiChevronDown className='text-white' />
-  </button>
-</DropdownMenuTrigger>
+                <button className='bg-gray-600 text-white px-4 py-2 rounded-lg flex items-center'>
+                  <FiChevronDown className='text-white' />
+                </button>
+              </DropdownMenuTrigger>
               <DropdownMenuContent className="w-full">
                 {categories.map((category) => (
                   <DropdownMenuItem
@@ -130,33 +148,32 @@ export default function Projects() {
                 </p>
               </div>
               <div className="flex space-x-2 mt-4 justify-end">
-  <a href={project.repo} target="_blank" rel="noopener noreferrer" onClick={(e) => e.stopPropagation()}>
-    <SocialLink
-      href={project.repo}
-      className="h-6 w-6"
-      icon={GitHubIcon}
-    />
-  </a>
-  {project.liveDemo && (
-    <a href={project.liveDemo} target="_blank" rel="noopener noreferrer" onClick={(e) => e.stopPropagation()}>
-      <SocialLink
-        href={project.liveDemo ?? "#"}
-        className="h-6 w-6"
-        icon={LinkIcon}
-      />
-    </a>
-  )}
-  {project.video && (
-    <a href={project.video} target="_blank" rel="noopener noreferrer" onClick={(e) => e.stopPropagation()}>
-      <SocialLink
-        href={project.video}
-        className="h-6 w-6"
-        icon={YouTubeIcon}
-      />
-    </a>
-  )}
-</div>
-
+                <a href={project.repo} target="_blank" rel="noopener noreferrer" onClick={(e) => e.stopPropagation()}>
+                  <SocialLink
+                    href={project.repo}
+                    className="h-6 w-6"
+                    icon={GitHubIcon}
+                  />
+                </a>
+                {project.liveDemo && (
+                  <a href={project.liveDemo} target="_blank" rel="noopener noreferrer" onClick={(e) => e.stopPropagation()}>
+                    <SocialLink
+                      href={project.liveDemo ?? "#"}
+                      className="h-6 w-6"
+                      icon={LinkIcon}
+                    />
+                  </a>
+                )}
+                {project.video && (
+                  <a href={project.video} target="_blank" rel="noopener noreferrer" onClick={(e) => e.stopPropagation()}>
+                    <SocialLink
+                      href={project.video}
+                      className="h-6 w-6"
+                      icon={YouTubeIcon}
+                    />
+                  </a>
+                )}
+              </div>
             </div>
           ))}
         </div>

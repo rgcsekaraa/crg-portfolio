@@ -14,7 +14,7 @@ export default async function RecentPosts() {
           href='/blog'
           className='mt-8 inline-flex items-center gap-2 text-muted-foreground underline decoration-1 underline-offset-2 transition-colors hover:text-foreground'
         >
-          <span>All posts</span>
+          <span className='ml-4'>All posts</span>
         </Link>
       </div>
     </section>

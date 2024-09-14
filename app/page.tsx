@@ -71,27 +71,28 @@ export default function Home() {
 
           {/* Right Column */}
         <div className='text-gray-700 dark:text-gray-100'>
-            <p className='mt-6 text-lg font-semibold'>
-                I&rsquo;m a recent <span className='text-slate-500 dark:text-slate-400'>IT graduate</span> from <span className='text-slate-500 dark:text-slate-400'>QUT</span>, specializing in Software Development and full-stack technologies.
-            </p>
-            <p className='mt-4'>
-                Skilled in the <span className='font-medium text-slate-600 dark:text-slate-300'>MERN stack</span>, <span className='font-medium text-slate-600 dark:text-slate-300'>Python</span>, and devops solutions like <span className='font-medium text-slate-600 dark:text-slate-300'>AWS</span> and <span className='font-medium text-slate-600 dark:text-slate-300'>Docker</span>, with knowledge gained through academic work and personal projects.
-            </p>
-            <p className='mt-4'>
-               I&rsquo;m a collaborative team player ready to contribute to innovative software development teams.
-            </p>
-            <p className='mt-4'>
-                Any <span className='text-slate-900 dark:text-slate-200'>job opportunities</span>, please&nbsp;
-              <Link
-                href='/contact'
-                className='inline-block border-b border-slate-500 dark:border-slate-400 text-slate-500 dark:text-slate-400 hover:text-slate-600 dark:hover:text-slate-300'
-              >
-                send me an email
-              </Link>
-                &nbsp;or connect with me through my social media profiles.
-              
-            </p>
-        </div>
+    <p className='mt-6 text-lg'>
+        I’m a recent <span className='text-slate-500 font-extrabold dark:text-slate-400'>IT graduate</span> from <span className='text-slate-500 font-extrabold dark:text-slate-400'>QUT</span>, specializing in Software Development and full-stack technologies.
+    </p>
+    <p className='mt-4'>
+    From <span className='font-bold text-slate-600 dark:text-slate-300'> design </span> to <span className='font-bold text-slate-600 dark:text-slate-300'> deployment </span>, I can handle it all—design, frontend, backend, and databases. Specialised in the <span className='font-medium text-slate-600 dark:text-slate-300'>MERN stack</span>, <span className='font-medium text-slate-600 dark:text-slate-300'>Python</span>, <span className='font-medium text-slate-600 dark:text-slate-300'>.NET</span>, and DevOps tools like <span className='font-medium text-slate-600 dark:text-slate-300'>AWS</span> and <span className='font-medium text-slate-600 dark:text-slate-300'>Docker</span>.
+</p>
+    <p className='mt-4'>
+    I’m a <span className='font-medium text-slate-600 dark:text-slate-300'>fast learner</span>, <span className='font-medium text-slate-600 dark:text-slate-300'>adaptive</span>, a <span className='font-medium text-slate-600 dark:text-slate-300'>strong problem solver</span>, and a <span className='font-medium text-slate-600 dark:text-slate-300'>team player</span>.
+</p>
+    <p className='mt-4'>
+    Got opportunities?&nbsp;
+    <Link
+        href='/contact'
+        className='inline-block border-b border-slate-500 dark:border-slate-400 text-slate-500 dark:text-slate-400 hover:text-slate-600 dark:hover:text-slate-300'
+    >
+        Drop me an email
+    </Link>
+    &nbsp;or reach out on social media.
+</p>
+
+</div>
+
 
       </section>
 

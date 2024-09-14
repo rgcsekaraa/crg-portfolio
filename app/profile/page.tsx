@@ -57,7 +57,7 @@ const Experience = () => (
     </div>
     <div>
       <h3 className='mb-2 text-xl font-bold'>
-        Lead Developer - Industry IT Project, QUT (March 2024 - Aug 2024)
+        Lead Developer - IT Industry Project, QUT (March 2024 - Aug 2024)
       </h3>
       <p className='text-justify leading-relaxed'>
         Led a team of 5 in developing a Django-based bushfire monitoring system for client Orefox. Managed source code, resolved conflicts, and ensured smooth team collaboration. Successfully built a comprehensive dashboard with real-time map integration and alerts within 2 months, demonstrating strong project management and technical skills.

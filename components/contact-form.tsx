@@ -16,7 +16,9 @@ const reasonSchema = z.object({
 })
 
 const jobOpportunitySchema = z.object({
-  jobLink: z.string().url('Please provide a valid job post link'),
+  jobLink: z.string()
+    .url('Provide a valid job post link')
+    .regex(/https?:\/\/[^\s]+/, 'Invalid job post URL format'),
   companyName: z.string().min(1, 'Please provide a company name'),
 })
 
@@ -30,8 +32,12 @@ const feedbackSchema = z.object({
 })
 
 const personalInfoSchema = z.object({
-  name: z.string().min(1, 'Please enter your name'),
-  email: z.string().email('Please enter a valid email'),
+  name: z.string()
+    .min(2, 'Your name must be at least 2 characters long')
+    .max(50, 'Name is too long'),
+  email: z.string()
+    .email('Please enter a valid email address')
+    .regex(/^[\w.+\-]+@[a-zA-Z\d\-]+\.[a-zA-Z\d\-\.]+$/, 'Invalid email format'),
 })
 
 export default function Component() {

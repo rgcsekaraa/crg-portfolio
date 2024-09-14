@@ -23,6 +23,7 @@ export default function Projects() {
   const [searchTerm, setSearchTerm] = useState("");
   const [selectedProject, setSelectedProject] = useState(null);
   const [isModalOpen, setIsModalOpen] = useState(false);
+  const [selectedCategoryIndex, setSelectedCategoryIndex] = useState(0);
 
   const filterProjects = (category: string) => {
     return ALL_PROJECTS.filter((project) => project.category === category);
@@ -42,23 +43,49 @@ export default function Projects() {
     setIsModalOpen(false);
   };
 
-  // UseEffect to listen for 'Escape' key press to close the modal
+  // Handle arrow key navigation for categories
   useEffect(() => {
     const handleKeyDown = (event: KeyboardEvent) => {
+      if (event.key === "ArrowDown") {
+        setSelectedCategoryIndex((prevIndex) =>
+          prevIndex < categories.length - 1 ? prevIndex + 1 : prevIndex
+        );
+      }
+      if (event.key === "ArrowUp") {
+        setSelectedCategoryIndex((prevIndex) =>
+          prevIndex > 0 ? prevIndex - 1 : prevIndex
+        );
+      }
+    };
+
+    window.addEventListener("keydown", handleKeyDown);
+
+    // Cleanup the event listener on component unmount
+    return () => {
+      window.removeEventListener("keydown", handleKeyDown);
+    };
+  }, []);
+
+  useEffect(() => {
+    setSelectedCategory(categories[selectedCategoryIndex]);
+  }, [selectedCategoryIndex]);
+
+  // UseEffect to listen for 'Escape' key press to close the modal
+  useEffect(() => {
+    const handleEscapeKey = (event: KeyboardEvent) => {
       if (event.key === "Escape") {
         closeModal();
       }
     };
 
     if (isModalOpen) {
-      window.addEventListener("keydown", handleKeyDown);
+      window.addEventListener("keydown", handleEscapeKey);
     } else {
-      window.removeEventListener("keydown", handleKeyDown);
+      window.removeEventListener("keydown", handleEscapeKey);
     }
 
-    // Cleanup the event listener on component unmount
     return () => {
-      window.removeEventListener("keydown", handleKeyDown);
+      window.removeEventListener("keydown", handleEscapeKey);
     };
   }, [isModalOpen]);
 
@@ -77,7 +104,7 @@ export default function Projects() {
                 </button>
               </DropdownMenuTrigger>
               <DropdownMenuContent className="w-full">
-                {categories.map((category) => (
+                {categories.map((category, idx) => (
                   <DropdownMenuItem
                     key={category}
                     onSelect={() => setSelectedCategory(category)}
@@ -94,11 +121,11 @@ export default function Projects() {
         </div>
 
         <ul className="space-y-4 hidden lg:block">
-          {categories.map((category) => (
+          {categories.map((category, idx) => (
             <li
               key={category}
-              className={`cursor-pointer px-3 py-2 rounded-lg ${
-                selectedCategory === category ? "bg-gray-700 text-white" : "hover:bg-gray-200 dark:hover:bg-gray-700"
+              className={`cursor-pointer px-3 py-2 rounded-3xl text-center ${
+                selectedCategory === category ? " bg-gray-700 text-white" : "hover:bg-gray-200 dark:hover:bg-gray-700"
               }`}
               onClick={() => setSelectedCategory(category)}
             >
@@ -106,6 +133,7 @@ export default function Projects() {
             </li>
           ))}
         </ul>
+
       </aside>
 
       <main className="flex-1 p-4 lg:p-6 bg-gray-50 dark:bg-slate-900 text-black dark:text-white rounded-r-lg">

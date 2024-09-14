@@ -3,7 +3,7 @@ import ContactForm from '@/components/contact-form';
 
 const ContactPage = () => {
   return (
-      <div className="max-w-lg w-full space-y-1 p-8 bg-white shadow-lg rounded-xl dark:bg-slate-950">
+      <div className="max-w-lg w-full space-y-1 p-8 bg-white shadow-lg rounded-xl dark:bg-slate-800">
         <div className="text-center">
           <h2 className="text-3xl font-light text-gray-900 dark:text-gray-50">
             Get In Touch

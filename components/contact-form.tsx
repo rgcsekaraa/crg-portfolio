@@ -99,8 +99,12 @@ export default function Component() {
     try {
       switch (step) {
         case 1:
+          if (!formData.reason) {
+          stepErrors.reason = "Please select a reason"
+        } else {
           reasonSchema.parse({ reason: formData.reason })
-          break
+        }
+        break
         case 2:
           if (formData.reason === 'Job Opportunity') {
             jobOpportunitySchema.parse({

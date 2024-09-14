@@ -1,206 +1,468 @@
-export const WEB_APPS = [
+export const ALL_PROJECTS = [
+  // Web Apps
   {
-    title: 'Mentor Labs',
-    tags: ['Typescript', 'React', 'Redux Toolkit', 'Nodejs', 'PostgreSQL'],
+    title: '2day Diary App',
+    tags: ['Tailwind CSS', 'MongoDB', 'Next.js'],
     description:
-      'Apply for mentorship to the top mentors recommended by our powerful algorithm based on your profile. Enjoy one-to-one live mentorship in our interactive video streaming labs for free.',
-    thumbnail: '/_static/projects/mentorlabs.png',
-    repo: 'https://github.com/adarshaacharya/MentorLabs',
-    video: 'https://www.youtube.com/watch?v=3QJ1Jr6l3ZQ',
-    liveDemo: 'https://mentorlabs.com',
-    status: 'Completed',
+      'A full-stack diary app with secure login, featuring a clean and minimalistic UI for daily entries. Users can write and store daily thoughts securely with biometric login.',
+    repo: 'https://github.com/rgcsekaraa/2day-diary',
+    video: 'https://www.youtube.com/watch?v=dQw4w9WgXcQ',
+    liveDemo: 'https://2day-frontend.vercel.app',
+    status: 'In Progress',
     complexity: 'Medium',
-    frontend: ['React', 'Typescript', 'Redux Toolkit'],
-    backend: ['Nodejs', 'PostgreSQL'],
-    devOps: ['Docker', 'Kubernetes'],
-    lastUpdated: '2024-08-31',
+    frontend: ['Next.js', 'Tailwind CSS'],
+    backend: ['MongoDB'],
+    devOps: ['Docker', 'Vercel'],
+    lastUpdated: '2024-09-01',
     license: 'MIT',
+    category: 'Web Apps',
     features: [
-      'One-to-one video mentorship', 
-      'Powerful recommendation algorithm', 
-      'Interactive streaming'
+      'Secure login with biometrics',
+      'Daily diary entries',
+      'Minimalistic and user-friendly UI'
     ]
   },
   {
-    title: 'CS Overflow',
-    repo: 'https://github.com/adarshaacharya/CsOverflow',
-    thumbnail: '/_static/projects/csoverflow.png',
+    title: 'imgsss',
+    tags: ['Next.js', 'WASM', 'Tailwind CSS'],
     description:
-      'Q/A forum for Computer Science and Engineering students. Ask a question, contribute an answer and upvote your favourite one.',
-    tags: ['Typescript', 'React', 'Redux', 'Nodejs', 'PostgreSQL'],
+      'A WASM-based image slideshow app where users can upload up to 20 images and generate a shareable link for others to view. Provides a clean interface for navigating through the slideshow.',
+    repo: 'https://github.com/rgcsekaraa/imgsss',
+    video: 'https://www.youtube.com/watch?v=dQw4w9WgXcQ',
+    liveDemo: 'https://imgsss.vercel.app',
+    status: 'In Progress',
+    complexity: 'Medium',
+    frontend: ['Next.js', 'Tailwind CSS', 'WASM'],
+    backend: ['Next.js', 'Node.js'],
+    devOps: ['Vercel', 'Docker'],
+    lastUpdated: '2024-09-01',
+    license: 'GPL',
+    category: 'Web Apps',
+    features: [
+      'Upload and view images',
+      'Shareable slideshow link',
+      'Clean, minimalistic UI'
+    ]
+  },
+  {
+    title: 'Mentor Connect',
+    tags: ['React', 'Redux', 'Node.js', 'PostgreSQL'],
+    description:
+      'A platform that connects mentors with mentees based on skill levels. Provides one-on-one mentorship through real-time chat and video integration.',
+    repo: 'https://github.com/rgcsekaraa/mentor-connect',
+    video: 'https://www.youtube.com/watch?v=dQw4w9WgXcQ',
+    liveDemo: 'https://mentorconnect.vercel.app',
+    status: 'In Progress',
+    complexity: 'High',
+    frontend: ['React', 'Redux', 'Tailwind CSS'],
+    backend: ['Node.js', 'PostgreSQL'],
+    devOps: ['Docker', 'Kubernetes'],
+    lastUpdated: '2024-08-15',
+    license: 'MIT',
+    category: 'Web Apps',
+    features: [
+      'Real-time chat and video mentorship',
+      'Skill-based matching',
+      'Secure login with OAuth'
+    ]
+  },
+
+  // Tools
+  {
+    title: 'Guardify',
+    tags: ['eBPF', 'Node.js', 'Security'],
+    description:
+      'A backend-focused security monitoring tool using eBPF for real-time package installation monitoring and suspicious activity detection.',
+    repo: 'https://github.com/rgcsekaraa/guardify',
+    video: 'https://www.youtube.com/watch?v=dQw4w9WgXcQ',
+    liveDemo: 'https://guardify.com',
+    status: 'Completed',
+    complexity: 'High',
+    backend: ['eBPF', 'Node.js'],
+    devOps: ['Docker', 'AWS'],
+    lastUpdated: '2024-09-01',
+    license: 'MIT',
+    category: 'Tools',
+    features: [
+      'Real-time security monitoring',
+      'Package installation tracking',
+      'eBPF integration'
+    ]
+  },
+  {
+    title: 'API Tracker',
+    tags: ['Python', 'FastAPI', 'PostgreSQL'],
+    description:
+      'A monitoring tool for tracking API usage and performance across multiple services, providing real-time analytics and error tracking.',
+    repo: 'https://github.com/rgcsekaraa/api-tracker',
+    video: 'https://www.youtube.com/watch?v=dQw4w9WgXcQ',
+    liveDemo: 'https://apitracker.com',
+    status: 'In Progress',
+    complexity: 'Medium',
+    backend: ['FastAPI', 'PostgreSQL'],
+    devOps: ['Docker', 'GCP'],
+    lastUpdated: '2024-09-01',
+    license: 'GPL',
+    category: 'Tools',
+    features: [
+      'API performance tracking',
+      'Real-time analytics',
+      'Error logging and alerts'
+    ]
+  },
+  {
+    title: 'Server Watch',
+    tags: ['Node.js', 'Express', 'MongoDB'],
+    description:
+      'A tool to monitor server uptime and performance, providing real-time alerts via email and SMS if any downtime occurs.',
+    repo: 'https://github.com/rgcsekaraa/server-watch',
+    video: 'https://www.youtube.com/watch?v=dQw4w9WgXcQ',
+    liveDemo: 'https://serverwatch.com',
+    status: 'In Progress',
+    complexity: 'High',
+    backend: ['Node.js', 'Express', 'MongoDB'],
+    devOps: ['Docker', 'AWS'],
+    lastUpdated: '2024-08-20',
+    license: 'Apache 2.0',
+    category: 'Tools',
+    features: [
+      'Real-time server monitoring',
+      'Downtime alerts via email and SMS',
+      'Detailed performance tracking'
+    ]
+  },
+
+  // Frontend Projects
+  {
+    title: 'ClubSeeker Admin Panel',
+    tags: ['shadcn', 'Tailwind CSS'],
+    description:
+      'An admin panel for managing clubs, focusing on UI/UX using shadcn and Tailwind CSS. It offers an intuitive interface for managing club members and announcements.',
+    repo: 'https://github.com/rgcsekaraa/clubseeker-admin',
+    video: 'https://www.youtube.com/watch?v=dQw4w9WgXcQ',
+    liveDemo: 'https://clubseeker.com/admin',
+    status: 'Completed',
+    complexity: 'Medium',
+    frontend: ['shadcn', 'Tailwind CSS'],
+    backend: [],
+    devOps: [],
+    lastUpdated: '2024-09-01',
+    license: 'MIT',
+    category: 'Frontend Projects',
+    features: [
+      'Club management',
+      'Announcement system',
+      'Intuitive UI'
+    ]
+  },
+  {
+  title: 'WexDB',
+    tags: ['Next.js', 'Tailwind CSS', 'TypeScript'],
+    description:
+      'A website for all workouts and exercises with embedded YouTube links for quick reference.',
+    thumbnail: '/_static/projects/wexdb.png',
+    repo: 'https://github.com/rgcsekaraa/wexdb',
+    video: '',
+    liveDemo: 'https://wexdb.vercel.app',
+    status: 'Completed',
+    category: 'Web Apps',
+    complexity: 'Medium',
+    frontend: ['Next.js', 'Tailwind CSS', 'TypeScript'],
+    backend: [],
+    devOps: [],
+    lastUpdated: '2024-09-01',
+    license: 'MIT',
+    features: [
+      'Comprehensive workout database', 
+      'Embedded YouTube links for exercises', 
+      'User-friendly interface'
+    ]
+  },
+  {
+    title: 'Weather Dashboard',
+    tags: ['React', 'Tailwind CSS'],
+    description:
+      'A weather dashboard that shows real-time weather updates from different locations. Users can search and save locations to track their weather over time.',
+    repo: 'https://github.com/rgcsekaraa/weather-dashboard',
+    video: 'https://www.youtube.com/watch?v=dQw4w9WgXcQ',
+    liveDemo: 'https://weatherdash.com',
     status: 'In Progress',
     complexity: 'Low',
-    lastUpdated: '2024-09-10',
-    video: 'https://www.youtube.com/watch?v=3QJ1Jr6l3ZQ',
-    frontend: ['React', 'Typescript'],
-    liveDemo: null,
-    backend: ['Nodejs', 'PostgreSQL'],
-    license: 'GPL',
-    features: ['Q&A Forum', 'Upvote System', 'User Profiles']
-  },
-  {
-    title: 'Pass Man',
-    repo: 'https://github.com/adarshaacharya/PassMan',
-    demo: 'https://passmanager.vercel.app/',
-    thumbnail: '/_static/projects/passman.png',
-    description:
-      'Cloud-based password manager for personal and business use. Credentials are hashed using AES256 algorithm, and one-way hashing is done using Scrypt algorithm.',
-    tags: ['Next.js', 'Next Auth', 'Prisma', 'Docker', 'Chakra UI'],
-    status: 'Completed',
-    complexity: 'High',
-    video: 'https://www.youtube.com/watch?v=3QJ1Jr6l3ZQ',
-    frontend: ['Next.js', 'Chakra UI'],
-    backend: ['Next Auth', 'Prisma'],
-    devOps: ['Docker'],
-    lastUpdated: '2024-08-01',
-    liveDemo: null,
+    frontend: ['React', 'Tailwind CSS'],
+    backend: [],
+    devOps: [],
+    lastUpdated: '2024-09-05',
     license: 'MIT',
+    category: 'Frontend Projects',
     features: [
-      'AES256 Encryption', 
-      'Scrypt Algorithm Hashing', 
-      'Personal and Business Vaults'
+      'Real-time weather updates',
+      'Location search and save',
+      'Clean UI with graphs and charts'
     ]
   },
+
+  // Backend Projects
   {
-    title: 'Code Treats',
-    repo: 'https://github.com/adarshaacharya/CodeTreats',
-    thumbnail: '/_static/projects/codetreats.png',
+    title: 'S2L (Speech-to-Language)',
+    tags: ['AI', 'LLM', 'Next.js', 'Tailwind CSS'],
     description:
-      'In-browser IDE for running, collaborating, and saving code snippets. Supports 10+ languages and multiple real-time collaboration features.',
-    tags: ['Typescript', 'React', 'Nodejs', 'MongoDB', 'Socket'],
-    status: 'Beta',
-    video: 'https://www.youtube.com/watch?v=3QJ1Jr6l3ZQ',
-    complexity: 'High',
-    frontend: ['React', 'Typescript'],
-    backend: ['Nodejs', 'MongoDB'],
-    devOps: ['Docker'],
-    lastUpdated: '2024-07-15',
-    liveDemo: null,
-    license: 'GPL',
-    features: [
-      'Real-time Collaboration', 
-      '10+ Languages Support', 
-      'VS Code-like Editor'
-    ]
-  },
-  {
-    title: 'E-Complaints',
-    repo: 'https://github.com/adarshaacharya/E-Complaints',
-    thumbnail: '/_static/projects/ecomplaints.png',
-    description:
-      'A public complaint management app to send complaints to government departments. Admins filter & forward complaints to respective departments for resolution.',
-    tags: ['Node.js', 'Express', 'Ejs', 'MongoDB'],
+      'A speech-to-language translation app where users can translate spoken language in real-time using AI models and LLMs. The app supports multiple languages and provides an easy-to-use interface.',
+    repo: 'https://github.com/rgcsekaraa/s2l',
+    video: 'https://www.youtube.com/watch?v=dQw4w9WgXcQ',
+    liveDemo: 'https://s2l.vercel.app',
     status: 'Completed',
     complexity: 'Medium',
-    video: 'https://www.youtube.com/watch?v=3QJ1Jr6l3ZQ',
-    frontend: ['Ejs'],
-    liveDemo: null,
-    backend: ['Node.js', 'MongoDB'],
-    lastUpdated: '2024-06-21',
-    license: 'Apache 2.0',
+    frontend: ['Next.js', 'Tailwind CSS'],
+    backend: ['AI/LLM'],
+    devOps: ['AWS', 'Docker'],
+    lastUpdated: '2024-09-01',
+    license: 'MIT',
+    category: 'Backend Projects',
     features: [
-      'Complaint Management', 
-      'Admin Dashboard', 
-      'Departmental Forwarding'
+      'Real-time voice translation',
+      'Supports multiple languages',
+      'Clean and intuitive UI'
     ]
   },
   {
-    title: 'Node.js Blog System',
-    repo: 'https://github.com/adarshaacharya/NodejsBlogSystem',
-    thumbnail: '/_static/projects/blog.png',
+    title: 'Shak-AI',
+    tags: ['T5 LLM', 'FastAPI', 'React', 'Vite'],
     description:
-      'Boilerplate for blogging using Node.js, MongoDB, and Socket for real-time updates. Users can create profiles, post, and comment on posts.',
-    tags: ['Node.js', 'Express', 'Ejs', 'MongoDB'],
+      'A real-time voice translation tool using T5 LLM. Users can upload files, query information through voice interaction, and get real-time results in their preferred language.',
+    repo: 'https://github.com/rgcsekaraa/shak-ai',
+    video: 'https://www.youtube.com/watch?v=dQw4w9WgXcQ',
+    liveDemo: 'https://shak-ai.vercel.app',
+    status: 'Completed',
+    complexity: 'High',
+    frontend: ['React', 'Vite'],
+    backend: ['FastAPI', 'T5 LLM'],
+    devOps: ['AWS', 'Docker'],
+    lastUpdated: '2024-09-08',
+    license: 'Apache 2.0',
+    category: 'Backend Projects',
+    features: [
+      'Real-time voice translation',
+      'File query via voice',
+      'T5 LLM integration for accurate results'
+    ]
+  },
+  {
+    title: 'Flight Tracker',
+    tags: ['APIs', 'Mapbox', 'Node.js'],
+    description:
+      'A backend service for live flight tracking using APIs and Mapbox for real-time data visualization. Provides accurate data on flight locations and routes.',
+    repo: 'https://github.com/rgcsekaraa/flight-tracker',
+    video: 'https://www.youtube.com/watch?v=dQw4w9WgXcQ',
+    liveDemo: 'https://flighttracker.com',
+    status: 'In Progress',
+    complexity: 'High',
+    backend: ['Node.js', 'Mapbox', 'Express'],
+    devOps: ['AWS', 'Docker'],
+    lastUpdated: '2024-09-01',
+    license: 'GPL',
+    category: 'Backend Projects',
+    features: [
+      'Live flight tracking',
+      'API integration',
+      'Mapbox visualization'
+    ]
+  },
+
+  // Full-Stack Projects
+  {
+    title: 'Grota (Gym + Rota)',
+    tags: ['React', 'Node.js', 'Express', 'MongoDB'],
+    description:
+      'A full gym management platform that allows gym coaches to manage workout schedules, memberships, and fees. Includes a personal interaction approach and messaging service between coaches and members.',
+    repo: 'https://github.com/rgcsekaraa/grota',
+    video: 'https://www.youtube.com/watch?v=dQw4w9WgXcQ',
+    liveDemo: 'https://grota.vercel.app',
+    status: 'In Progress',
+    complexity: 'High',
+    frontend: ['React', 'Tailwind CSS'],
+    backend: ['Node.js', 'Express', 'MongoDB'],
+    devOps: ['AWS', 'Docker'],
+    lastUpdated: '2024-09-01',
+    license: 'MIT',
+    category: 'Full-Stack Projects',
+    features: [
+      'Gym management for schedules and memberships',
+      'Messaging service for personal interaction',
+      'Admin controls for fee management'
+    ]
+  },
+  {
+    title: 'FirePath Bushfire Monitoring',
+    tags: ['Django', 'Leaflet.js', 'PostgreSQL'],
+    description:
+      'A full-stack project for real-time bushfire monitoring, integrating a map with alerts for bushfire activity. Developed as part of an industry project with real-time data integration.',
+    repo: 'https://github.com/rgcsekaraa/firepath',
+    video: 'https://www.youtube.com/watch?v=dQw4w9WgXcQ',
+    liveDemo: '',
+    status: 'Completed',
+    complexity: 'High',
+    frontend: ['Leaflet.js', 'Tailwind CSS'],
+    backend: ['Django', 'PostgreSQL'],
+    devOps: ['AWS', 'Docker'],
+    lastUpdated: '2024-09-01',
+    license: 'GPL',
+    category: 'Full-Stack Projects',
+    features: [
+      'Real-time bushfire monitoring',
+      'Map integration with alerts',
+      'Industry-level data integration'
+    ]
+  },
+  {
+    title: 'Portfolio Manager',
+    tags: ['Next.js', 'MongoDB', 'Tailwind CSS'],
+    description:
+      'A full-stack app for managing portfolios and showcasing projects with GitHub integration. Includes an admin panel to manage projects, links, and descriptions.',
+    repo: 'https://github.com/rgcsekaraa/portfolio-manager',
+    video: 'https://www.youtube.com/watch?v=dQw4w9WgXcQ',
+    liveDemo: 'https://portfoliomanager.com',
     status: 'In Progress',
     complexity: 'Medium',
-    video: 'https://www.youtube.com/watch?v=3QJ1Jr6l3ZQ',
-    frontend: ['Ejs'],
-    liveDemo: null,
-    backend: ['Node.js', 'MongoDB'],
-    lastUpdated: '2024-05-10',
+    frontend: ['Next.js', 'Tailwind CSS'],
+    backend: ['MongoDB', 'Node.js'],
+    devOps: ['Vercel', 'Docker'],
+    lastUpdated: '2024-09-02',
     license: 'MIT',
+    category: 'Full-Stack Projects',
     features: [
-      'User Profiles', 
-      'Real-time Updates', 
-      'Post & Comment System'
+      'GitHub integration',
+      'Admin panel for project management',
+      'Portfolio showcase'
     ]
   },
+
+  // Academic/Research Projects
   {
-    title: 'Tour 360°',
-    repo: 'https://github.com/adarshaacharya/Tour360',
-    thumbnail: '/_static/projects/tour360.png',
+    title: 'AI in Healthcare',
+    tags: ['AI', 'ML', 'Healthcare'],
     description:
-      'Virtual reality viewing platform built for VisitNepal2020. Helps users view 360 thumbnails and book flights, hotels, and guides.',
-    tags: ['Php', 'MySQL', 'Aws'],
-    status: 'Completed',
+      'A research project focused on leveraging AI and machine learning to improve diagnostics and treatment in healthcare settings. Explores AI-based tools for predictive analysis.',
+    repo: 'https://github.com/rgcsekaraa/ai-healthcare',
+    video: 'https://www.youtube.com/watch?v=dQw4w9WgXcQ',
+    liveDemo: '',
+    status: 'In Progress',
     complexity: 'High',
-    video: 'https://www.youtube.com/watch?v=3QJ1Jr6l3ZQ',
-    frontend: ['Php'],
-    backend: ['MySQL'],
-    devOps: ['Aws'],
-    liveDemo: null,
-    lastUpdated: '2024-01-01',
-    license: 'GPL',
+    backend: ['AI', 'ML'],
+    devOps: [],
+    lastUpdated: '2024-08-01',
+    license: 'MIT',
+    category: 'Academic/Research Projects',
     features: [
-      '360° VR Viewing', 
-      'Flight & Hotel Booking', 
-      'Guide Service'
+      'AI-driven healthcare solutions',
+      'Predictive analysis for diagnostics',
+      'ML-based tools for treatment plans'
     ]
-  }
-] as const;
+  },
+  {
+    title: 'Blockchain Voting System',
+    tags: ['Blockchain', 'Smart Contracts', 'Ethereum'],
+    description:
+      'A decentralized voting system developed using blockchain technology. Ensures security and transparency in elections through Ethereum smart contracts.',
+    repo: 'https://github.com/rgcsekaraa/blockchain-voting',
+    video: 'https://www.youtube.com/watch?v=dQw4w9WgXcQ',
+    liveDemo: '',
+    status: 'In Progress',
+    complexity: 'High',
+    backend: ['Ethereum', 'Smart Contracts'],
+    devOps: ['AWS', 'Docker'],
+    lastUpdated: '2024-07-15',
+    license: 'GPL',
+    category: 'Academic/Research Projects',
+    features: [
+      'Decentralized voting system',
+      'Blockchain transparency',
+      'Secure elections with smart contracts'
+    ]
+  },
+  {
+    title: 'Quantum Computing Research',
+    tags: ['Quantum Computing', 'Qiskit', 'Python'],
+    description:
+      'A research project exploring the capabilities of quantum computing in solving complex problems. Developed quantum algorithms and tested on real quantum machines using Qiskit.',
+    repo: 'https://github.com/rgcsekaraa/quantum-research',
+    video: 'https://www.youtube.com/watch?v=dQw4w9WgXcQ',
+    liveDemo: '',
+    status: 'In Progress',
+    complexity: 'High',
+    backend: ['Qiskit', 'Python'],
+    devOps: [],
+    lastUpdated: '2024-08-20',
+    license: 'MIT',
+    category: 'Academic/Research Projects',
+    features: [
+      'Quantum algorithm development',
+      'Qiskit integration',
+      'Tested on real quantum machines'
+    ]
+  },
 
-
-export const TOOLS = [
+  // Contributions/Open Source
   {
-    title: 'states-nepal',
-    repo: 'https://github.com/adarshaacharya/states-nepal',
-    external: 'https://www.npmjs.com/package/states-nepal',
-    video: 'https://www.youtube.com/watch?v=3QJ1Jr6l3ZQ',
+    title: 'Node.js Contributions',
+    tags: ['Node.js', 'Open Source'],
     description:
-      'npm package to get the dataset about different administrative division of Nepal.',
-    techs: ['npm-package'],
-    status: 'Completed',
-    liveDemo: null,
-    lastUpdated: '2024-04-15',
-    license: 'MIT'
+      'Contributed to the Node.js open-source community by fixing bugs, adding features, and improving documentation. Focused on performance improvements.',
+    repo: 'https://github.com/nodejs/node',
+    video: 'https://www.youtube.com/watch?v=dQw4w9WgXcQ',
+    liveDemo: '',
+    status: 'Contributions',
+    complexity: 'Medium',
+    backend: ['Node.js'],
+    devOps: [],
+    lastUpdated: '2024-06-15',
+    license: 'MIT',
+    category: 'Contributions/Open Source',
+    features: [
+      'Bug fixes and performance improvements',
+      'Feature additions',
+      'Documentation updates'
+    ]
   },
   {
-    title: 'aaja (आज)',
-    repo: 'https://github.com/adarshaacharya/aaja',
-    external: 'https://www.npmjs.com/package/aaja',
-    video: 'https://www.youtube.com/watch?v=3QJ1Jr6l3ZQ',
+    title: 'React Native CLI Contributions',
+    tags: ['React Native', 'Open Source'],
     description:
-      "CLI tool to get today's Nepali date, tithi, public events, and current time.",
-    techs: ['npm-package'],
-    liveDemo: null,
-    status: 'Completed',
-    lastUpdated: '2024-06-10',
-    license: 'MIT'
+      'Contributed to the React Native CLI by adding new features, fixing bugs, and improving the overall developer experience. Focused on cross-platform enhancements.',
+    repo: 'https://github.com/react-native-community/cli',
+    video: 'https://www.youtube.com/watch?v=dQw4w9WgXcQ',
+    liveDemo: '',
+    status: 'Contributions',
+    complexity: 'Medium',
+    frontend: ['React Native'],
+    devOps: [],
+    lastUpdated: '2024-07-10',
+    license: 'MIT',
+    category: 'Contributions/Open Source',
+    features: [
+      'Cross-platform improvements',
+      'Bug fixes and new features',
+      'Developer experience enhancements'
+    ]
   },
   {
-    title: 'ApiHub',
-    repo: 'https://github.com/adarshaacharya/ApiHub',
-    video: 'https://www.youtube.com/watch?v=3QJ1Jr6l3ZQ',
-    external:
-      'https://marketplace.visualstudio.com/items?itemName=AadarshaAcharya.api-hub',
+    title: 'Linux Kernel Contributions',
+    tags: ['C', 'Linux', 'Open Source'],
     description:
-      'VS Code extension to get free third-party API URLs on different categories.',
-    techs: ['vscode-extension'],
-    status: 'Completed',
-    liveDemo: null,
-    lastUpdated: '2024-02-28',
-    license: 'Apache 2.0'
-  },
-  {
-    title: 'shitcommits',
-    repo: 'https://github.com/adarshaacharya/shitcommits',
-    external: 'https://www.npmjs.com/package/shitcommits',
-    description: 'CLI tool to make git commits with not-so-perfect messages.',
-    techs: ['npm-package'],
-    video: 'https://www.youtube.com/watch?v=3QJ1Jr6l3ZQ',
-    status: 'Completed',
-    liveDemo: null,
-    lastUpdated: '2024-03-22',
-    license: 'GPL'
+      'Contributed to the Linux Kernel open-source community by fixing bugs and improving the performance of certain system calls. Focused on kernel-level optimizations.',
+    repo: 'https://github.com/torvalds/linux',
+    video: 'https://www.youtube.com/watch?v=dQw4w9WgXcQ',
+    liveDemo: '',
+    status: 'Contributions',
+    complexity: 'High',
+    backend: ['C'],
+    devOps: [],
+    lastUpdated: '2024-07-25',
+    license: 'GPL',
+    category: 'Contributions/Open Source',
+    features: [
+      'Kernel-level bug fixes',
+      'Performance optimizations',
+      'System call improvements'
+    ]
   }
 ] as const;

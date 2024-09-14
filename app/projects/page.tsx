@@ -1,12 +1,13 @@
 'use client';
 import React, { useState } from "react";
-import { WEB_APPS, TOOLS } from "@/data/projects";
+import { ALL_PROJECTS} from "@/data/projects";
 import { Input } from "@/components/ui/input";
 import { SocialLink } from "@/components/social-link";
 import { GitHubIcon, LinkIcon, YouTubeIcon } from "@/components/icons";
 import { FiChevronDown } from 'react-icons/fi';
 import Modal from "@/components/modal"; // Import the modal component
 import { DropdownMenu, DropdownMenuItem, DropdownMenuTrigger, DropdownMenuContent } from "@/components/ui/dropdown-menu";
+import * as Tooltip from '@radix-ui/react-tooltip';
 
 
 const categories = [
@@ -26,15 +27,9 @@ export default function Projects() {
   const [isModalOpen, setIsModalOpen] = useState(false);
 
   const filterProjects = (category: string) => {
-    switch (category) {
-      case "Web Apps":
-        return WEB_APPS;
-      case "Tools":
-        return TOOLS;
-      default:
-        return [];
-    }
-  };
+  return ALL_PROJECTS.filter((project) => project.category === category);
+};
+
 
   const filteredProjects = filterProjects(selectedCategory).filter((project) =>
     project.title.toLowerCase().includes(searchTerm.toLowerCase())
@@ -116,7 +111,7 @@ export default function Projects() {
             >
               <div>
                 <div className="flex items-center justify-between mb-2">
-                  <h3 className="text-xl font-semibold">{project.title}</h3>
+                  <h3 className="text-xl font-semibold cursor-pointer">{project.title}</h3>
                   {project.status && (
                     <span
                       className={`px-2 py-1 text-sm rounded-2xl ${
@@ -136,26 +131,33 @@ export default function Projects() {
                 </p>
               </div>
               <div className="flex space-x-2 mt-4 justify-end">
-                <SocialLink
-                  href={project.repo}
-                  className="h-6 w-6"
-                  icon={GitHubIcon}
-                />
-                {project.liveDemo && (
-                  <SocialLink
-                    href={project.liveDemo ?? "#"}
-                    className="h-6 w-6"
-                    icon={LinkIcon}
-                  />
-                )}
-                {project.video && (
-                  <SocialLink
-                    href={project.video}
-                    className="h-6 w-6"
-                    icon={YouTubeIcon}
-                  />
-                )}
-              </div>
+  <a href={project.repo} target="_blank" rel="noopener noreferrer" onClick={(e) => e.stopPropagation()}>
+    <SocialLink
+      href={project.repo}
+      className="h-6 w-6"
+      icon={GitHubIcon}
+    />
+  </a>
+  {project.liveDemo && (
+    <a href={project.liveDemo} target="_blank" rel="noopener noreferrer" onClick={(e) => e.stopPropagation()}>
+      <SocialLink
+        href={project.liveDemo ?? "#"}
+        className="h-6 w-6"
+        icon={LinkIcon}
+      />
+    </a>
+  )}
+  {project.video && (
+    <a href={project.video} target="_blank" rel="noopener noreferrer" onClick={(e) => e.stopPropagation()}>
+      <SocialLink
+        href={project.video}
+        className="h-6 w-6"
+        icon={YouTubeIcon}
+      />
+    </a>
+  )}
+</div>
+
             </div>
           ))}
         </div>

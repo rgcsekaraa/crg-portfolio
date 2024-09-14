@@ -7,7 +7,6 @@ import { GitHubIcon, LinkIcon, YouTubeIcon } from "@/components/icons";
 import { FiChevronDown } from 'react-icons/fi';
 import Modal from "@/components/modal"; // Import the modal component
 import { DropdownMenu, DropdownMenuItem, DropdownMenuTrigger, DropdownMenuContent } from "@/components/ui/dropdown-menu";
-import * as Tooltip from '@radix-ui/react-tooltip';
 
 
 const categories = [

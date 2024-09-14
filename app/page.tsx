@@ -13,7 +13,7 @@ export default function Home() {
         <section className='mb-4 grid grid-cols-1 gap-4 md:grid-cols-[1fr,1px,2fr]'>
           {/* Left Column */}
           <div className='flex w-full flex-col items-center text-center'>
-            <div className='relative mb-3 mt-4 h-[130px] w-[130px] overflow-hidden rounded-full'>
+            <div className='relative mb-3 mt-4 overflow-hidden rounded-full'>
               <Image
                 src='/_static/me.png'
                 width={130}

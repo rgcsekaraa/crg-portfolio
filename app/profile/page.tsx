@@ -314,7 +314,7 @@ export default function About() {
   const [selectedSection, setSelectedSection] = useState('Summary');
   const navRefs = useRef([]);
 
-  const handleSectionChange = (sectionName) => {
+  const handleSectionChange = (sectionName: string) => {
     setSelectedSection(sectionName);
   };
 
@@ -337,7 +337,7 @@ export default function About() {
     return () => {
       window.removeEventListener('keydown', handleKeyDown);
     };
-  }, [selectedSection]);
+  }, [handleKeyDown]);
 
   const currentSection = sections.find(
     (section) => section.name === selectedSection

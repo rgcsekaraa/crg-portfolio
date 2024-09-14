@@ -319,18 +319,18 @@ export default function About() {
   };
 
   // Arrow key navigation
-  const handleKeyDown = (e) => {
-    const currentIndex = sections.findIndex(
-      (section) => section.name === selectedSection
-    );
-    if (e.key === 'ArrowRight') {
-      const nextIndex = (currentIndex + 1) % sections.length;
-      setSelectedSection(sections[nextIndex].name);
-    } else if (e.key === 'ArrowLeft') {
-      const prevIndex = (currentIndex - 1 + sections.length) % sections.length;
-      setSelectedSection(sections[prevIndex].name);
-    }
-  };
+  const handleKeyDown = (e: KeyboardEvent) => {
+  const currentIndex = sections.findIndex(
+    (section) => section.name === selectedSection
+  );
+  if (e.key === 'ArrowRight') {
+    const nextIndex = (currentIndex + 1) % sections.length;
+    setSelectedSection(sections[nextIndex].name);
+  } else if (e.key === 'ArrowLeft') {
+    const prevIndex = (currentIndex - 1 + sections.length) % sections.length;
+    setSelectedSection(sections[prevIndex].name);
+  }
+};
 
   useEffect(() => {
     window.addEventListener('keydown', handleKeyDown);

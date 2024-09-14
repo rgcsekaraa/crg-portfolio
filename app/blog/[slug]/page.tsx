@@ -26,14 +26,15 @@ export default async function Post({ params }: { params: { slug: string } }) {
 
   return (
     <section>
-      <div className='container max-w-3xl '>
+      <div className='container max-w-4xl '>
         <Link
-          href='/blog'
-          className='mb-8 inline-flex items-center gap-2 rounded-lg border border-black px-2 text-black transition-colors hover:bg-black hover:text-white dark:border-white dark:text-white dark:hover:bg-white dark:hover:text-black'
-        >
-          <ArrowLeftIcon className='h-5 w-5' />
-          <span>Back to posts</span>
-        </Link>
+  href='/blog'
+  className='mb-8 inline-flex items-center gap-2 rounded-lg border border-gray-700 px-4 py-2 text-gray-800 transition-colors duration-300 ease-in-out hover:bg-gray-800 hover:text-white dark:border-gray-300 dark:text-gray-300 dark:hover:bg-gray-300 dark:hover:text-gray-800'
+>
+  <ArrowLeftIcon className='h-5 w-5' />
+  <span>Back to posts</span>
+</Link>
+
 
         <header>
           <h1 className='text-3xl font-extrabold'>{title}</h1>
@@ -42,7 +43,7 @@ export default async function Post({ params }: { params: { slug: string } }) {
           </p>
         </header>
 
-        <main className='prose mt-5 dark:prose-invert'>
+        <main className='prose prose-md mt-5 dark:prose-invert'>
           <MDXContent source={content} />
         </main>
         <footer className='mt-16'>

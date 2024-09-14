@@ -214,7 +214,7 @@ const HonorsAndAwards = () => (
     {/* Cover Image Section */}
     <div className='w-full overflow-hidden rounded-lg shadow-md'>
       <Image
-        src='/_static/docs/1701064565603.png'
+        src='/_static/docs/1701064565603_me.png'
         width={500}
         height={500}
         alt='Best Paper Award Cover'

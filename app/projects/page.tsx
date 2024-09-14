@@ -140,9 +140,9 @@ export default function Projects() {
                   className="h-6 w-6"
                   icon={GitHubIcon}
                 />
-                {project.external && (
+                {project.liveDemo && (
                   <SocialLink
-                    href={project.external ?? "#"}
+                    href={project.liveDemo ?? "#"}
                     className="h-6 w-6"
                     icon={LinkIcon}
                   />

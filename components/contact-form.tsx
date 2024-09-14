@@ -152,7 +152,7 @@ export default function Component() {
               <div
                 key={i}
                 className={`w-1/3 text-center font-semibold ${
-                  i === step ? 'text-slate-600' : 'text-gray-400'
+                  i === step ? 'text-slate-600 dark:text-slate-100' : 'text-gray-300 dark:text-slate-600'
                 }`}
               >
                 Step {i}

@@ -403,8 +403,8 @@ export default function About() {
       <main className='flex-1 p-4 lg:p-6 bg-gray-50 dark:bg-slate-900 text-black dark:text-white rounded-b-lg'>
         <div className='flex justify-between items-center mb-4 relative'>
           <h2 className='text-2xl font-bold ml-1'>My {selectedSection}</h2>
-          <p className='hidden lg:block absolute right-0 bottom-0 mb-2 mr-2 text-sm text-gray-400 dark:text-gray-500'>
-            Use <kbd className="bg-gray-200 dark:bg-slate-700 p-1 rounded-full">←</kbd> or <kbd className="bg-gray-200 dark:bg-slate-700 p-1 rounded-full">→</kbd> arrow keys to navigate
+          <p className='hidden lg:block absolute right-0 bottom-0 mb-2 mr-2 text-xs text-gray-400 dark:text-gray-500'>
+            Use <kbd className="bg-gray-200 dark:bg-slate-700 p-1 rounded-full">←</kbd> or <kbd className="bg-gray-200 dark:bg-slate-700 p-1 rounded-full">→</kbd> arrow keys to navigate.
           </p>
         </div>
         <div className='p-6 bg-white dark:bg-slate-800 rounded-lg shadow-md'>

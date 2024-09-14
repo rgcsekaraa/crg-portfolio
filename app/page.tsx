@@ -75,13 +75,13 @@ export default function Home() {
                 I&rsquo;m a recent <span className='text-slate-500 dark:text-slate-400'>IT graduate</span> from <span className='text-slate-500 dark:text-slate-400'>QUT</span>, specializing in Software Development and full-stack technologies.
             </p>
             <p className='mt-4'>
-                Skilled in the <span className='font-medium text-slate-600 dark:text-slate-300'>MERN stack</span>, <span className='font-medium text-slate-600 dark:text-slate-300'>Python</span>, and cloud technologies like <span className='font-medium text-slate-600 dark:text-slate-300'>AWS</span> and <span className='font-medium text-slate-600 dark:text-slate-300'>Docker</span>, with knowledge gained through academic work and personal projects.
+                Skilled in the <span className='font-medium text-slate-600 dark:text-slate-300'>MERN stack</span>, <span className='font-medium text-slate-600 dark:text-slate-300'>Python</span>, and devops solutions like <span className='font-medium text-slate-600 dark:text-slate-300'>AWS</span> and <span className='font-medium text-slate-600 dark:text-slate-300'>Docker</span>, with knowledge gained through academic work and personal projects.
             </p>
             <p className='mt-4'>
-                Currently practicing <span className='font-medium text-slate-600 dark:text-slate-300'>DSA</span>, I&rsquo;m a collaborative team player ready to contribute to innovative software development teams.
+               I&rsquo;m a collaborative team player ready to contribute to innovative software development teams.
             </p>
             <p className='mt-4'>
-                If you have any <span className='text-slate-900 dark:text-slate-200'>job opportunities</span>, please&nbsp;
+                Any <span className='text-slate-900 dark:text-slate-200'>job opportunities</span>, please&nbsp;
               <Link
                 href='/contact'
                 className='inline-block border-b border-slate-500 dark:border-slate-400 text-slate-500 dark:text-slate-400 hover:text-slate-600 dark:hover:text-slate-300'

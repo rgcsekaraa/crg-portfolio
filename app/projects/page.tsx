@@ -105,12 +105,12 @@ export default function Projects() {
           {filteredProjects.map((project, idx) => (
             <div
               key={idx}
-              className="p-6 bg-white dark:bg-slate-800 rounded-lg shadow-md hover:shadow-lg transition-transform transform hover:scale-102 flex flex-col justify-between"
+              className="p-6 bg-white dark:bg-slate-800 rounded-lg shadow-md hover:shadow-lg transition-transform transform hover:scale-105 flex flex-col justify-between cursor-pointer hover:bg-slate-300 dark:hover:bg-gray-600"
               onClick={() => openModal(project)} // Open modal on click
             >
               <div>
                 <div className="flex items-center justify-between mb-2">
-                  <h3 className="text-xl font-semibold cursor-pointer hover:text-blue-500 transition ease-in">{project.title}</h3>
+                  <h3 className="text-xl font-semibold">{project.title}</h3>
                   {project.status && (
                     <span
                       className={`px-2 py-1 text-sm rounded-2xl ${

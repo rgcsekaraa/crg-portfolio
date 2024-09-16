@@ -1,5 +1,4 @@
 export const ALL_PROJECTS = [
-  // Web Apps
   {
     title: '2day Diary App',
     tags: ['Tailwind CSS', 'MongoDB', 'Next.js'],
@@ -20,6 +19,28 @@ export const ALL_PROJECTS = [
       'Secure login with biometrics',
       'Daily diary entries',
       'Minimalistic and user-friendly UI'
+    ]
+  },
+  {
+    title: 'todorama ToDo App',
+    tags: ['shadcn', 'Google SSO', 'Next.js', 'Vercel', 'prisma'],
+    description:
+      'A task management app featuring Google SSO for seamless authentication and a clean, modern UI. The app allows users to organize and manage daily tasks within a simple, square container interface.',
+    repo: 'https://github.com/rgcsekaraa/todorama',
+    video: 'https://www.youtube.com/watch?v=dQw4w9WgXcQ',
+    liveDemo: 'https://todorama.vercel.app',
+    status: '',
+    complexity: 'Medium',
+    frontend: ['Next.js', 'shadcn'],
+    backend: ['Next.js', 'prisma'],
+    devOps: ['Vercel'],
+    lastUpdated: '2024-09-15',
+    license: 'MIT',
+    category: 'Full-Stack Projects',
+    features: [
+      'Google SSO for authentication',
+      'Task management',
+      'Clean and modern UI with centered square container'
     ]
   },
   {
@@ -149,14 +170,10 @@ export const ALL_PROJECTS = [
     lastUpdated: '2024-09-01',
     license: 'MIT',
     category: 'Frontend Projects',
-    features: [
-      'Club management',
-      'Announcement system',
-      'Intuitive UI'
-    ]
+    features: ['Club management', 'Announcement system', 'Intuitive UI']
   },
   {
-  title: 'WexDB',
+    title: 'WexDB',
     tags: ['Next.js', 'Tailwind CSS', 'TypeScript'],
     description:
       'A website for all workouts and exercises with embedded YouTube links for quick reference.',
@@ -173,8 +190,8 @@ export const ALL_PROJECTS = [
     lastUpdated: '2024-09-01',
     license: 'MIT',
     features: [
-      'Comprehensive workout database', 
-      'Embedded YouTube links for exercises', 
+      'Comprehensive workout database',
+      'Embedded YouTube links for exercises',
       'User-friendly interface'
     ]
   },
@@ -465,4 +482,4 @@ export const ALL_PROJECTS = [
       'System call improvements'
     ]
   }
-] as const;
+] as const

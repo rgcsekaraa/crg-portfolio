@@ -22,7 +22,7 @@ export const ALL_PROJECTS = [
     ]
   },
   {
-    title: 'todorama ToDo App',
+    title: 'Todorama',
     tags: ['shadcn', 'Google SSO', 'Next.js', 'Vercel', 'prisma'],
     description:
       'A task management app featuring Google SSO for seamless authentication and a clean, modern UI. The app allows users to organize and manage daily tasks within a simple, square container interface.',

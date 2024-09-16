@@ -29,7 +29,7 @@ export const ALL_PROJECTS = [
     repo: 'https://github.com/rgcsekaraa/todorama',
     video: 'https://www.youtube.com/watch?v=dQw4w9WgXcQ',
     liveDemo: 'https://todorama.vercel.app',
-    status: '',
+    status: 'Completed',
     complexity: 'Medium',
     frontend: ['Next.js', 'shadcn'],
     backend: ['Next.js', 'prisma'],

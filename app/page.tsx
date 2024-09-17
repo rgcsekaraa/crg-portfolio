@@ -70,36 +70,89 @@ export default function Home() {
           <div className='hidden w-[1px] bg-gray-200 dark:bg-gray-800 md:block'></div>
 
           {/* Right Column */}
-        <div className='text-gray-700 dark:text-gray-100'>
-    <p className='mt-6 text-lg'>
-        I’m a recent <span className='text-slate-500 font-extrabold dark:text-slate-400'>IT graduate</span> from <span className='text-slate-500 font-extrabold dark:text-slate-400'>QUT</span>, specializing in Software Development and full-stack technologies.
-    </p>
-    <p className='mt-4'>
-    From <span className='font-bold text-slate-600 dark:text-slate-300'> concept </span> to <span className='font-bold text-slate-600 dark:text-slate-300'> deployment </span>, I can handle it all—design, frontend, backend, and databases. Specialised in the <span className='font-medium text-slate-600 dark:text-slate-300'>MERN stack</span>, <span className='font-medium text-slate-600 dark:text-slate-300'>Python</span>, <span className='font-medium text-slate-600 dark:text-slate-300'>.NET</span>, and DevOps tools like <span className='font-medium text-slate-600 dark:text-slate-300'>AWS</span> and <span className='font-medium text-slate-600 dark:text-slate-300'>Docker</span>.
-</p>
-    <p className='mt-4'>
-    I’m a <span className='font-medium text-slate-600 dark:text-slate-300'>fast learner</span>, <span className='font-medium text-slate-600 dark:text-slate-300'>adaptive</span>, a <span className='font-medium text-slate-600 dark:text-slate-300'>strong problem solver</span>, and a <span className='font-medium text-slate-600 dark:text-slate-300'>team player</span>.
-</p>
-    <p className='mt-4'>
-    Got opportunities?&nbsp;
-    <Link
-        href='/contact'
-        className='inline-block border-b border-slate-500 dark:border-slate-400 text-slate-500 dark:text-slate-400 hover:text-slate-600 dark:hover:text-slate-300'
-    >
-        Drop me an email
-    </Link>
-    &nbsp;or reach out on social media.
-</p>
-
-</div>
-
-
-      </section>
+          <div className='text-gray-700 dark:text-gray-100'>
+            <p className='mt-6 text-lg'>
+              I’m a recent{' '}
+              <span className='font-extrabold text-slate-500 dark:text-slate-400'>
+                IT graduate
+              </span>{' '}
+              from{' '}
+              <span className='font-extrabold text-slate-500 dark:text-slate-400'>
+                QUT
+              </span>
+              , specializing in Software Development and full-stack
+              technologies.
+            </p>
+            <p className='mt-4'>
+              From{' '}
+              <span className='font-bold text-slate-600 dark:text-slate-300'>
+                {' '}
+                concept{' '}
+              </span>{' '}
+              to{' '}
+              <span className='font-bold text-slate-600 dark:text-slate-300'>
+                {' '}
+                deployment{' '}
+              </span>
+              , I can handle it all—design, frontend, backend, and databases.
+              Specialised in the{' '}
+              <span className='font-medium text-slate-600 dark:text-slate-300'>
+                MERN stack
+              </span>
+              ,{' '}
+              <span className='font-medium text-slate-600 dark:text-slate-300'>
+                Python
+              </span>
+              ,{' '}
+              <span className='font-medium text-slate-600 dark:text-slate-300'>
+                .NET
+              </span>
+              , and DevOps tools like{' '}
+              <span className='font-medium text-slate-600 dark:text-slate-300'>
+                AWS
+              </span>{' '}
+              and{' '}
+              <span className='font-medium text-slate-600 dark:text-slate-300'>
+                Docker
+              </span>
+              .
+            </p>
+            <p className='mt-4'>
+              I’m a{' '}
+              <span className='font-medium text-slate-600 dark:text-slate-300'>
+                fast learner
+              </span>
+              ,{' '}
+              <span className='font-medium text-slate-600 dark:text-slate-300'>
+                adaptive
+              </span>
+              , a{' '}
+              <span className='font-medium text-slate-600 dark:text-slate-300'>
+                strong problem solver
+              </span>
+              , and a{' '}
+              <span className='font-medium text-slate-600 dark:text-slate-300'>
+                team player
+              </span>
+              .
+            </p>
+            <p className='mt-4'>
+              Got opportunities?&nbsp;
+              <a
+                href='mailto:rgcsekaraa@gmail.com'
+                className='inline-block border-b border-slate-500 text-slate-500 hover:text-slate-600 dark:border-slate-400 dark:text-slate-400 dark:hover:text-slate-300'
+              >
+                Drop me an email
+              </a>
+              &nbsp;or reach out on social media.
+            </p>
+          </div>
+        </section>
 
         <div className='my-8 w-full border-t border-gray-200 dark:border-gray-800' />
 
         <div>
-          <h2 className='mb-6 text-2xl font-bold ml-4'>Latest posts</h2>
+          <h2 className='mb-6 ml-4 text-2xl font-bold'>Latest posts</h2>
           <div className=''>
             <RecentPosts />
           </div>

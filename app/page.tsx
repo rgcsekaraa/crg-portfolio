@@ -54,7 +54,7 @@ export default function Home() {
               ))}
             </div>
 
-            <p className='mt-4 inline-block cursor-pointer'>
+            <p className='mt-3 inline-block cursor-pointer'>
               <a
                 href={LINKS.RESUME}
                 target='_blank'
@@ -146,6 +146,10 @@ export default function Home() {
               </a>
               &nbsp;or reach out on social media.
             </p>
+            <div className='mt-2 inline-flex w-auto items-center rounded-full bg-gray-800 px-2 py-2 text-white dark:bg-gray-600'>
+              <div className='mr-2 h-3 w-3 rounded-full bg-green-500'></div>
+              <span className='text-sm'>Available for Work</span>
+            </div>
           </div>
         </section>
 

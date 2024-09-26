@@ -39,7 +39,7 @@ export default function Projects() {
     return ALL_PROJECTS.filter(project => project.category === category)
   }
 
-  const sortProjects = projects => {
+  const sortProjects = (projects: Array<{ status: string }>) => {
     return projects.sort((a, b) => {
       if (a.status === 'Completed' && b.status !== 'Completed') return -1
       if (a.status !== 'Completed' && b.status === 'Completed') return 1

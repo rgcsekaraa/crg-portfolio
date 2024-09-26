@@ -4,7 +4,6 @@ import { SocialLink } from '@/components/social-link'
 import React from 'react'
 import { LINKS } from '@/lib/constants'
 import RecentPosts from '@/components/recent-posts'
-import Link from 'next/link'
 
 export default function Home() {
   return (
@@ -56,7 +55,7 @@ export default function Home() {
 
             <p className='mt-3 inline-block cursor-pointer'>
               <a
-                href={LINKS.RESUME}
+                href='/_static/docs/Chandrasekaraa_Resume_Software_Developer.pdf'
                 target='_blank'
                 rel='noopener noreferrer'
                 className='rounded-lg border border-black px-3 py-1 text-black transition-colors duration-200 ease-in hover:bg-black hover:text-white dark:border-white dark:text-white dark:hover:bg-white dark:hover:text-black'

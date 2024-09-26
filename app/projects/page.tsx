@@ -1,115 +1,144 @@
-'use client';
-import React, { useState, useEffect } from "react";
-import { ALL_PROJECTS } from "@/data/projects";
-import { Input } from "@/components/ui/input";
-import { SocialLink } from "@/components/social-link";
-import { GitHubIcon, LinkIcon, YouTubeIcon } from "@/components/icons";
-import { FiChevronDown } from 'react-icons/fi';
-import Modal from "@/components/modal"; // Import the modal component
-import { DropdownMenu, DropdownMenuItem, DropdownMenuTrigger, DropdownMenuContent } from "@/components/ui/dropdown-menu";
+'use client'
+import React, { useState, useEffect, useMemo } from 'react'
+import { ALL_PROJECTS } from '@/data/projects'
+import { Input } from '@/components/ui/input'
+import { SocialLink } from '@/components/social-link'
+import { GitHubIcon, LinkIcon, YouTubeIcon } from '@/components/icons'
+import { FiChevronDown, FiX } from 'react-icons/fi'
+import Modal from '@/components/modal'
+import {
+  DropdownMenu,
+  DropdownMenuItem,
+  DropdownMenuTrigger,
+  DropdownMenuContent
+} from '@/components/ui/dropdown-menu'
+import { Button } from '@/components/ui/button'
 
 const categories = [
-  "Web Apps",
-  "Tools",
-  "Frontend Projects",
-  "Backend Projects",
-  "Full-Stack Projects",
-  "Academic/Research Projects",
-  "Contributions/Open Source",
-];
+  'All Projects',
+  'Web Apps',
+  'Tools',
+  'Frontend Projects',
+  'Backend Projects',
+  'Full-Stack Projects',
+  'Academic/Research Projects',
+  'Contributions/Open Source'
+]
 
 export default function Projects() {
-  const [selectedCategory, setSelectedCategory] = useState("Web Apps");
-  const [searchTerm, setSearchTerm] = useState("");
-  const [selectedProject, setSelectedProject] = useState(null);
-  const [isModalOpen, setIsModalOpen] = useState(false);
-  const [selectedCategoryIndex, setSelectedCategoryIndex] = useState(0);
+  const [selectedCategory, setSelectedCategory] = useState('All Projects')
+  const [searchTerm, setSearchTerm] = useState('')
+  const [selectedProject, setSelectedProject] = useState(null)
+  const [isModalOpen, setIsModalOpen] = useState(false)
+  const [selectedCategoryIndex, setSelectedCategoryIndex] = useState(0)
 
   const filterProjects = (category: string) => {
-    return ALL_PROJECTS.filter((project) => project.category === category);
-  };
+    if (category === 'All Projects') {
+      return ALL_PROJECTS
+    }
+    return ALL_PROJECTS.filter(project => project.category === category)
+  }
 
-  const filteredProjects = filterProjects(selectedCategory).filter((project) =>
-    project.title.toLowerCase().includes(searchTerm.toLowerCase())
-  );
+  const sortProjects = projects => {
+    return projects.sort((a, b) => {
+      if (a.status === 'Completed' && b.status !== 'Completed') return -1
+      if (a.status !== 'Completed' && b.status === 'Completed') return 1
+      return 0
+    })
+  }
+
+  const filteredAndSortedProjects = useMemo(() => {
+    const filtered = filterProjects(selectedCategory).filter(
+      project =>
+        project.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
+        project.description.toLowerCase().includes(searchTerm.toLowerCase())
+    )
+    return sortProjects(filtered)
+  }, [selectedCategory, searchTerm])
 
   const openModal = (project: any) => {
-    setSelectedProject(project);
-    setIsModalOpen(true);
-  };
+    setSelectedProject(project)
+    setIsModalOpen(true)
+  }
 
   const closeModal = () => {
-    setSelectedProject(null);
-    setIsModalOpen(false);
-  };
+    setSelectedProject(null)
+    setIsModalOpen(false)
+  }
+
+  const clearSearch = () => {
+    setSearchTerm('')
+  }
 
   // Handle arrow key navigation for categories
   useEffect(() => {
     const handleKeyDown = (event: KeyboardEvent) => {
-      if (event.key === "ArrowDown") {
-        setSelectedCategoryIndex((prevIndex) =>
+      if (event.key === 'ArrowDown') {
+        setSelectedCategoryIndex(prevIndex =>
           prevIndex < categories.length - 1 ? prevIndex + 1 : prevIndex
-        );
+        )
       }
-      if (event.key === "ArrowUp") {
-        setSelectedCategoryIndex((prevIndex) =>
+      if (event.key === 'ArrowUp') {
+        setSelectedCategoryIndex(prevIndex =>
           prevIndex > 0 ? prevIndex - 1 : prevIndex
-        );
+        )
       }
-    };
+    }
 
-    window.addEventListener("keydown", handleKeyDown);
+    window.addEventListener('keydown', handleKeyDown)
 
-    // Cleanup the event listener on component unmount
     return () => {
-      window.removeEventListener("keydown", handleKeyDown);
-    };
-  }, []);
+      window.removeEventListener('keydown', handleKeyDown)
+    }
+  }, [])
 
   useEffect(() => {
-    setSelectedCategory(categories[selectedCategoryIndex]);
-  }, [selectedCategoryIndex]);
+    setSelectedCategory(categories[selectedCategoryIndex])
+  }, [selectedCategoryIndex])
 
-  // UseEffect to listen for 'Escape' key press to close the modal
   useEffect(() => {
     const handleEscapeKey = (event: KeyboardEvent) => {
-      if (event.key === "Escape") {
-        closeModal();
+      if (event.key === 'Escape') {
+        closeModal()
       }
-    };
+    }
 
     if (isModalOpen) {
-      window.addEventListener("keydown", handleEscapeKey);
+      window.addEventListener('keydown', handleEscapeKey)
     } else {
-      window.removeEventListener("keydown", handleEscapeKey);
+      window.removeEventListener('keydown', handleEscapeKey)
     }
 
     return () => {
-      window.removeEventListener("keydown", handleEscapeKey);
-    };
-  }, [isModalOpen]);
+      window.removeEventListener('keydown', handleEscapeKey)
+    }
+  }, [isModalOpen])
 
   return (
-    <div className="flex flex-col lg:flex-row min-h-screen rounded-lg">
-      <aside className="w-full lg:w-1/4 bg-gray-100 dark:bg-slate-800 text-black dark:text-white p-4 lg:p-6 lg:min-h-screen rounded-l-lg">
-        <h2 className="text-3xl font-semibold mb-6 hidden lg:block">Categories</h2>
+    <div className='flex min-h-screen flex-col rounded-lg lg:flex-row'>
+      <aside className='w-full rounded-l-lg bg-gray-100 p-4 text-black dark:bg-slate-800 dark:text-white lg:min-h-screen lg:w-1/4 lg:p-6'>
+        <h2 className='mb-6 hidden text-3xl font-semibold lg:block'>
+          Categories
+        </h2>
 
-        <div className="block lg:hidden mt-2 mb-2">
-          <div className="flex justify-between items-center">
-            <h2 className="text-xl font-bold">{selectedCategory}</h2>
+        <div className='mb-2 mt-2 block lg:hidden'>
+          <div className='flex items-center justify-between'>
+            <h2 className='text-xl font-bold'>{selectedCategory}</h2>
             <DropdownMenu>
               <DropdownMenuTrigger asChild>
-                <button className='bg-gray-600 text-white px-4 py-2 rounded-lg flex items-center'>
+                <button className='flex items-center rounded-lg bg-gray-600 px-4 py-2 text-white'>
                   <FiChevronDown className='text-white' />
                 </button>
               </DropdownMenuTrigger>
-              <DropdownMenuContent className="w-full">
+              <DropdownMenuContent className='w-full'>
                 {categories.map((category, idx) => (
                   <DropdownMenuItem
                     key={category}
                     onSelect={() => setSelectedCategory(category)}
-                    className={`cursor-pointer px-4 py-2 rounded-lg ${
-                      selectedCategory === category ? "bg-gray-600 text-white" : "dark:hover:bg-gray-700 hover:bg-gray-200"
+                    className={`cursor-pointer rounded-lg px-4 py-2 ${
+                      selectedCategory === category
+                        ? 'bg-gray-600 text-white'
+                        : 'hover:bg-gray-200 dark:hover:bg-gray-700'
                     }`}
                   >
                     {category}
@@ -120,12 +149,14 @@ export default function Projects() {
           </div>
         </div>
 
-        <ul className="space-y-4 hidden lg:block">
+        <ul className='hidden space-y-4 lg:block'>
           {categories.map((category, idx) => (
             <li
               key={category}
-              className={`cursor-pointer px-3 py-2 rounded-3xl text-center ${
-                selectedCategory === category ? " bg-gray-700 text-white" : "hover:bg-gray-200 dark:hover:bg-gray-700"
+              className={`cursor-pointer rounded-3xl px-3 py-2 text-center ${
+                selectedCategory === category
+                  ? 'bg-gray-700 text-white'
+                  : 'hover:bg-gray-200 dark:hover:bg-gray-700'
               }`}
               onClick={() => setSelectedCategory(category)}
             >
@@ -133,70 +164,100 @@ export default function Projects() {
             </li>
           ))}
         </ul>
-
       </aside>
 
-      <main className="flex-1 p-4 lg:p-6 bg-gray-50 dark:bg-slate-900 text-black dark:text-white rounded-r-lg">
-        <div className="hidden lg:flex justify-between items-center mb-6">
-          <h2 className="text-2xl font-bold">{selectedCategory}</h2>
-          <Input
-            placeholder="Search projects..."
-            value={searchTerm}
-            onChange={(e) => setSearchTerm(e.target.value)}
-            className="w-full sm:w-1/2 lg:w-1/3 dark:bg-slate-700 dark:text-white"
-          />
+      <main className='flex-1 rounded-r-lg bg-gray-50 p-4 text-black dark:bg-slate-900 dark:text-white lg:p-6'>
+        <div className='mb-6 hidden items-center justify-between lg:flex'>
+          <h2 className='text-2xl font-bold'>{selectedCategory}</h2>
+          <div className='flex w-full items-center sm:w-1/2 lg:w-1/3'>
+            <Input
+              placeholder='Search projects...'
+              value={searchTerm}
+              onChange={e => setSearchTerm(e.target.value)}
+              className='flex-grow dark:bg-slate-700 dark:text-white'
+            />
+            {searchTerm && (
+              <Button
+                onClick={clearSearch}
+                className='ml-2 bg-gray-200 hover:bg-gray-300 dark:bg-gray-600 dark:hover:bg-gray-500'
+              >
+                <FiX />
+              </Button>
+            )}
+          </div>
         </div>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 gap-6">
-          {filteredProjects.map((project, idx) => (
+        {searchTerm && (
+          <p className='mb-4 text-gray-600 dark:text-gray-400'>
+            Searched for: "{searchTerm}"
+          </p>
+        )}
+
+        <div className='grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-2'>
+          {filteredAndSortedProjects.map((project, idx) => (
             <div
               key={idx}
-              className="p-6 bg-white dark:bg-slate-800 rounded-lg shadow-md hover:shadow-lg transition-transform transform hover:scale-105 flex flex-col justify-between cursor-pointer hover:bg-slate-300 dark:hover:bg-gray-600"
-              onClick={() => openModal(project)} // Open modal on click
+              className='flex transform cursor-pointer flex-col justify-between rounded-lg bg-white p-6 shadow-md transition-transform hover:scale-105 hover:bg-slate-300 hover:shadow-lg dark:bg-slate-800 dark:hover:bg-gray-600'
+              onClick={() => openModal(project)}
             >
               <div>
-                <div className="flex items-center justify-between mb-2">
-                  <h3 className="text-xl font-semibold">{project.title}</h3>
+                <div className='mb-2 flex items-center justify-between'>
+                  <h3 className='text-xl font-semibold'>{project.title}</h3>
                   {project.status && (
                     <span
-                      className={`px-2 py-1 text-sm rounded-2xl ${
+                      className={`rounded-2xl px-2 py-1 text-sm ${
                         project.status === 'Completed'
                           ? 'bg-green-100 text-green-800'
                           : project.status === 'In Progress'
-                          ? 'bg-yellow-100 text-yellow-800'
-                          : 'bg-gray-100 text-gray-800'
+                            ? 'bg-yellow-100 text-yellow-800'
+                            : 'bg-gray-100 text-gray-800'
                       }`}
                     >
                       {project.status}
                     </span>
                   )}
                 </div>
-                <p className="text-gray-600 dark:text-gray-400 mb-4 line-clamp-4 overflow-hidden cursor-pointer">
+                <p className='mb-4 line-clamp-4 cursor-pointer overflow-hidden text-gray-600 dark:text-gray-400'>
                   {project.description}
                 </p>
               </div>
-              <div className="flex space-x-2 mt-4 justify-end">
-                <a href={project.repo} target="_blank" rel="noopener noreferrer" onClick={(e) => e.stopPropagation()}>
+              <div className='mt-4 flex justify-end space-x-2'>
+                <a
+                  href={project.repo}
+                  target='_blank'
+                  rel='noopener noreferrer'
+                  onClick={e => e.stopPropagation()}
+                >
                   <SocialLink
                     href={project.repo}
-                    className="h-6 w-6"
+                    className='h-6 w-6'
                     icon={GitHubIcon}
                   />
                 </a>
                 {project.liveDemo && (
-                  <a href={project.liveDemo} target="_blank" rel="noopener noreferrer" onClick={(e) => e.stopPropagation()}>
+                  <a
+                    href={project.liveDemo}
+                    target='_blank'
+                    rel='noopener noreferrer'
+                    onClick={e => e.stopPropagation()}
+                  >
                     <SocialLink
-                      href={project.liveDemo ?? "#"}
-                      className="h-6 w-6"
+                      href={project.liveDemo ?? '#'}
+                      className='h-6 w-6'
                       icon={LinkIcon}
                     />
                   </a>
                 )}
                 {project.video && (
-                  <a href={project.video} target="_blank" rel="noopener noreferrer" onClick={(e) => e.stopPropagation()}>
+                  <a
+                    href={project.video}
+                    target='_blank'
+                    rel='noopener noreferrer'
+                    onClick={e => e.stopPropagation()}
+                  >
                     <SocialLink
                       href={project.video}
-                      className="h-6 w-6"
+                      className='h-6 w-6'
                       icon={YouTubeIcon}
                     />
                   </a>
@@ -207,8 +268,11 @@ export default function Projects() {
         </div>
       </main>
 
-      {/* Modal Component */}
-      <Modal isOpen={isModalOpen} onClose={closeModal} project={selectedProject} />
+      <Modal
+        isOpen={isModalOpen}
+        onClose={closeModal}
+        project={selectedProject}
+      />
     </div>
-  );
+  )
 }

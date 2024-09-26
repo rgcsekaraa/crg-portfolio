@@ -232,13 +232,13 @@ export default function Projects() {
               </div>
               <div className='mt-4 flex justify-end space-x-2'>
                 <a
-                  href={project.repo}
+                  href={project.repo ?? '#'}
                   target='_blank'
                   rel='noopener noreferrer'
                   onClick={e => e.stopPropagation()}
                 >
                   <SocialLink
-                    href={project.repo}
+                    href={project.repo ?? '#'}
                     className='h-6 w-6'
                     icon={GitHubIcon}
                   />

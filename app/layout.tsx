@@ -4,9 +4,10 @@ import { cn } from '@/lib/utils'
 import { ThemeProvider } from '@/components/theme-provider'
 import { Header } from '@/components/header'
 import { Footer } from '@/components/footer'
+import { Analytics } from '@vercel/analytics/react'
 import { Space_Grotesk } from 'next/font/google'
 import { siteMetadata } from '@/data/siteMetadata'
-import 'react-toastify/dist/ReactToastify.css';
+import 'react-toastify/dist/ReactToastify.css'
 import Head from './head'
 
 const space_grotesk = Space_Grotesk({
@@ -69,16 +70,15 @@ export default function RootLayout({
           enableSystem
           disableTransitionOnChange
         >
-          <main className="flex flex-col min-h-screen">
+          <main className='flex min-h-screen flex-col'>
             <Header />
-            <div className="flex-grow px-4 md:px-0">
-              <div className="max-w-4xl mx-auto">
-                {children}
-              </div>
+            <div className='flex-grow px-4 md:px-0'>
+              <div className='mx-auto max-w-4xl'>{children}</div>
             </div>
             <Footer />
           </main>
         </ThemeProvider>
+        <Analytics />
       </body>
     </html>
   )

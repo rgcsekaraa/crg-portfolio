@@ -22,6 +22,28 @@ export const ALL_PROJECTS = [
     ]
   },
   {
+    title: 'CheckFace',
+    tags: ['Next.js', 'Tailwind CSS', 'TypeScript', 'React Webcam'],
+    description:
+      'A real-time webcam app to check your face and appearance, with theme toggling and mirror options for enhanced user experience.',
+    repo: 'https://github.com/rgcsekaraa/checkface',
+    liveDemo: 'https://www.checkface.io',
+    status: 'Completed',
+    category: 'Web Apps',
+    complexity: 'Easy',
+    frontend: ['Next.js', 'Tailwind CSS', 'TypeScript', 'React Webcam'],
+    backend: [],
+    devOps: [],
+    lastUpdated: '2024-10-08',
+    license: 'MIT',
+    features: [
+      'Real-time webcam feed with mirror toggle',
+      'Dark and light theme switcher',
+      'Mobile-friendly and responsive design',
+      'Privacy-focused: no data recording or storage'
+    ]
+  },
+  {
     title: 'Being Foodie',
     tags: [
       'Node.js',

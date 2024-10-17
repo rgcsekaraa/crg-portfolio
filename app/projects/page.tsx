@@ -2,9 +2,6 @@
 import React, { useState, useEffect, useMemo } from 'react'
 import { ALL_PROJECTS } from '@/data/projects'
 import { Input } from '@/components/ui/input'
-import { SocialLink } from '@/components/social-link'
-import { GitHubIcon, LinkIcon, YouTubeIcon } from '@/components/icons'
-import { FiChevronDown, FiX } from 'react-icons/fi'
 import Modal from '@/components/modal'
 import {
   DropdownMenu,
@@ -13,6 +10,7 @@ import {
   DropdownMenuContent
 } from '@/components/ui/dropdown-menu'
 import { Button } from '@/components/ui/button'
+import { FiChevronDown, FiX } from 'react-icons/fi'
 
 const categories = [
   'All Projects',
@@ -231,18 +229,18 @@ export default function Projects() {
                 </p>
               </div>
               <div className='mt-4 flex justify-end space-x-2'>
-                <a
-                  href={project.repo ?? '#'}
-                  target='_blank'
-                  rel='noopener noreferrer'
-                  onClick={e => e.stopPropagation()}
-                >
-                  <SocialLink
-                    href={project.repo ?? '#'}
-                    className='h-6 w-6'
-                    icon={GitHubIcon}
-                  />
-                </a>
+                {project.repo && (
+                  <a
+                    href={project.repo}
+                    target='_blank'
+                    rel='noopener noreferrer'
+                    onClick={e => e.stopPropagation()}
+                  >
+                    <button className='rounded-md bg-gray-800 px-3 py-1 text-xs font-medium text-white hover:bg-gray-700 focus:outline-none focus:ring-2 focus:ring-gray-500 focus:ring-offset-2 dark:bg-gray-200 dark:text-gray-800 dark:hover:bg-gray-300 dark:focus:ring-gray-400'>
+                      GitHub
+                    </button>
+                  </a>
+                )}
                 {project.liveDemo && (
                   <a
                     href={project.liveDemo}
@@ -250,11 +248,9 @@ export default function Projects() {
                     rel='noopener noreferrer'
                     onClick={e => e.stopPropagation()}
                   >
-                    <SocialLink
-                      href={project.liveDemo ?? '#'}
-                      className='h-6 w-6'
-                      icon={LinkIcon}
-                    />
+                    <button className='rounded-md bg-blue-600 px-3 py-1 text-xs font-medium text-white hover:bg-blue-500 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 dark:bg-blue-300 dark:text-blue-900 dark:hover:bg-blue-400 dark:focus:ring-blue-500'>
+                      Demo
+                    </button>
                   </a>
                 )}
                 {project.video && (
@@ -264,11 +260,9 @@ export default function Projects() {
                     rel='noopener noreferrer'
                     onClick={e => e.stopPropagation()}
                   >
-                    <SocialLink
-                      href={project.video}
-                      className='h-6 w-6'
-                      icon={YouTubeIcon}
-                    />
+                    <button className='rounded-md bg-red-600 px-3 py-1 text-xs font-medium text-white hover:bg-red-500 focus:outline-none focus:ring-2 focus:ring-red-500 focus:ring-offset-2 dark:bg-red-300 dark:text-red-900 dark:hover:bg-red-400 dark:focus:ring-red-500'>
+                      Video
+                    </button>
                   </a>
                 )}
               </div>

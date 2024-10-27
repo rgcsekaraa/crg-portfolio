@@ -8,17 +8,15 @@ import type { GetStaticPropsContext } from 'next'
 
 export async function generateStaticParams() {
   const posts = await getPosts()
-  const slugs = posts.map(post => ({ slug: post.slug }))
-
-  return slugs
+  return posts.map(post => ({ slug: post.slug }))
 }
 
 interface PostProps {
-  params: { slug: string }
+  params: Promise<{ slug: string }>
 }
 
 export default async function Post({ params }: PostProps) {
-  const { slug } = params
+  const { slug } = await params // Use `await` to handle the promise resolution
   const post = await getPostBySlug(slug)
 
   if (!post) {

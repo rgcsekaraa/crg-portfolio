@@ -28,17 +28,18 @@ const Summary = () => (
           Passionate Learner:{' '}
         </span>
         Recent IT graduate from QUT with a Master’s in Software Development,
-        eager to apply my skills and grow in the field of full-stack
-        development.
+        focused on backend engineering. Eager to apply technical skills in
+        building reliable and scalable backend systems.
       </p>
 
       <p className='max-w-3xl text-justify leading-relaxed'>
         <span className='font-bold text-gray-900 dark:text-gray-200'>
           Hands-On Skills:{' '}
         </span>
-        Developed foundational skills in JavaScript (React, Node.js) and Python
-        through academic projects. Experienced with AWS and Docker, ready to
-        contribute effectively to development teams.
+        Developed solid skills in Python and JavaScript (Node.js) through
+        academic projects. Experienced with AWS and Docker for deploying and
+        managing scalable backend systems, ready to make an impact in backend
+        teams.
       </p>
 
       <p className='max-w-3xl text-justify leading-relaxed'>
@@ -46,9 +47,9 @@ const Summary = () => (
           Team-Oriented and Adaptive:{' '}
         </span>
         Known for quick learning and adaptability, with a strong ability to
-        grasp new concepts and work collaboratively. Seeking opportunities in
-        Australia to bring enthusiasm and a fresh perspective to a dynamic
-        full-stack development role.
+        grasp new concepts and collaborate effectively. Seeking opportunities in
+        Australia to bring a fresh perspective and enthusiasm to a dynamic
+        software development role.
       </p>
     </div>
   </div>
@@ -153,8 +154,9 @@ const Skills = () => (
         Industry Knowledge
       </h3>
       <p className='leading-relaxed text-gray-700 dark:text-gray-300'>
-        Full-Stack Development, MERN Stack, Cloud Computing, Software
-        Engineering, Agile Methodologies, REST APIs, eBPF.
+        Backend Development, Cloud Infrastructure, Software Engineering, REST
+        APIs, Linux Kernel Development, eBPF, System Call Interception, Agile
+        Methodologies
       </p>
     </div>
 
@@ -164,19 +166,8 @@ const Skills = () => (
         Tools & Technologies
       </h3>
       <p className='leading-relaxed text-gray-700 dark:text-gray-300'>
-        Python, Node.js, React, TypeScript, Docker, AWS, Django, MongoDB, MySQL,
-        Git, GitHub, Postman, CI/CD, Tailwind CSS, HTML5, CSS3
-      </p>
-    </div>
-
-    {/* Interpersonal Skills Section */}
-    <div>
-      <h3 className='mb-2 text-2xl font-bold text-gray-800 dark:text-gray-100'>
-        Interpersonal Skills
-      </h3>
-      <p className='leading-relaxed text-gray-700 dark:text-gray-300'>
-        Teamwork, Leadership, Fast Learner, Adaptability, Problem Solving,
-        Communication, Multitasking
+        Python, Node.js, Express, Django, Docker, AWS, Git, GitHub, Postman,
+        CI/CD, TypeScript, Tailwind, HTML5
       </p>
     </div>
 
@@ -186,7 +177,17 @@ const Skills = () => (
         Databases
       </h3>
       <p className='leading-relaxed text-gray-700 dark:text-gray-300'>
-        MongoDB, MySQL, SQLite
+        MongoDB, Postgresql, SQLite
+      </p>
+    </div>
+
+    {/* Interpersonal Skills Section */}
+    <div>
+      <h3 className='mb-2 text-2xl font-bold text-gray-800 dark:text-gray-100'>
+        Interpersonal Skills
+      </h3>
+      <p className='leading-relaxed text-gray-700 dark:text-gray-300'>
+        Teamwork, Fast Learner, Adaptability, Problem Solving, Communication.
       </p>
     </div>
   </div>

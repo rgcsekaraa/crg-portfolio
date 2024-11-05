@@ -19,7 +19,7 @@ const Summary = () => (
     </span>
 
     <p className='text-Left text-xl font-medium text-slate-900 dark:text-slate-300'>
-      IT Graduate | Full Stack Developer | Eager to Grow
+      IT Graduate | Software Developer | Eager to Grow
     </p>
 
     <div className='flex flex-col items-center space-y-4'>

@@ -71,51 +71,50 @@ export default function Home() {
           {/* Right Column */}
           <div className='text-gray-700 dark:text-gray-100'>
             <p className='mt-6 text-lg'>
-              I’m a recent{' '}
-              <span className='font-extrabold text-slate-500 dark:text-slate-400'>
-                IT graduate
-              </span>{' '}
-              from{' '}
-              <span className='font-extrabold text-slate-500 dark:text-slate-400'>
-                QUT
-              </span>
-              , specializing in Software Development and full-stack
-              technologies.
-            </p>
-            <p className='mt-4'>
-              From{' '}
-              <span className='font-bold text-slate-600 dark:text-slate-300'>
-                {' '}
-                concept{' '}
-              </span>{' '}
-              to{' '}
-              <span className='font-bold text-slate-600 dark:text-slate-300'>
-                {' '}
-                deployment{' '}
-              </span>
-              , I can handle it all—design, frontend, backend, and databases.
-              Specialised in the{' '}
-              <span className='font-medium text-slate-600 dark:text-slate-300'>
-                MERN stack
-              </span>
-              ,{' '}
-              <span className='font-medium text-slate-600 dark:text-slate-300'>
-                Python
-              </span>
-              ,{' '}
-              <span className='font-medium text-slate-600 dark:text-slate-300'>
-                .NET
-              </span>
-              , and DevOps tools like{' '}
-              <span className='font-medium text-slate-600 dark:text-slate-300'>
-                AWS
-              </span>{' '}
-              and{' '}
-              <span className='font-medium text-slate-600 dark:text-slate-300'>
-                Docker
-              </span>
-              .
-            </p>
+  I’m a recent{' '}
+  <span className='font-extrabold text-slate-500 dark:text-slate-400'>
+    IT graduate
+  </span>{' '}
+  from{' '}
+  <span className='font-extrabold text-slate-500 dark:text-slate-400'>
+    QUT
+  </span>
+  , specializing in Software Development with a strong focus on backend
+  technologies.
+</p>
+<p className='mt-4'>
+  From{' '}
+  <span className='font-bold text-slate-600 dark:text-slate-300'>
+    designing robust APIs
+  </span>{' '}
+  to{' '}
+  <span className='font-bold text-slate-600 dark:text-slate-300'>
+    managing databases and deployment pipelines
+  </span>
+  , I excel at building reliable backend systems. I specialize in backend
+  frameworks and tools like{' '}
+  <span className='font-medium text-slate-600 dark:text-slate-300'>
+    Node.js
+  </span>
+  ,{' '}
+  <span className='font-medium text-slate-600 dark:text-slate-300'>
+    Django
+  </span>
+  , and{' '}
+  <span className='font-medium text-slate-600 dark:text-slate-300'>
+    Python
+  </span>
+  , along with DevOps technologies such as{' '}
+  <span className='font-medium text-slate-600 dark:text-slate-300'>
+    AWS
+  </span>{' '}
+  and{' '}
+  <span className='font-medium text-slate-600 dark:text-slate-300'>
+    Docker
+  </span>
+  .
+</p>
+
             <p className='mt-4'>
               I’m a{' '}
               <span className='font-medium text-slate-600 dark:text-slate-300'>

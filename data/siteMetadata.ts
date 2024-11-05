@@ -4,7 +4,7 @@ export const siteMetadata = {
   siteUrl: 'https://sekaraa.com',
   socialBanner: '/_static/default-og-card.png',
   description:
-    'Chandrasekaraa RG - Fullstack developer passionate about creating and sharing things on internet',
+    'Chandrasekaraa RG - Software developer eager to create impactful backend solutions for the web',
   keywords: [
     `Chandrasekaraa RG, Chan, Sekaraa, chandrasekaraarg, rgchandrasekaraa, chandrasekaraaramadossganesh, chandrasekaraa ramadoss ganesh,ramadoss ganesh chandrasekaraa, rgcsekaraa, rgchan, chandru, chantruder`
   ],

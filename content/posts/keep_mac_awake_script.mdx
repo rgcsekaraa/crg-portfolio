@@ -1,0 +1,69 @@
+---
+title: How to Keep Your Mac Awake Using a Python Script
+author: 'Chandrasekaraa RG'
+publishedAt: '2024-11-13'
+---
+
+Hello everyone! 👋 I wanted to share a quick fix for a problem I recently faced.
+
+I was transferring about half a terabyte of files from my Mac to an external
+SSD, and I needed my Mac to stay awake until it was done. First, I tried using
+the built-in `caffeinate` command in Terminal, but it didn’t work as expected.
+Then, I installed the Amphetamine app for macOS—still no luck 🥲. So, I ended up
+writing a little Python script to keep my Mac awake for as long as I needed!
+
+We’ll be using the `pyautogui` Python module to do this. It simulates a key
+press at regular intervals to prevent your Mac from going to sleep.
+
+## Prerequisites
+
+Make sure you have Python installed, then install `pyautogui` using:
+
+```bash
+pip install pyautogui
+```
+
+## Script
+
+Here’s the Python code:
+
+```python
+import pyautogui
+import time
+
+# Interval (in seconds) between each simulated keypress
+interval = 60
+
+try:
+    print("Press Ctrl+C to stop the script.")
+    while True:
+        pyautogui.press('shift')  # Simulate pressing the Shift key
+        print("Shift key pressed to prevent sleep.")
+        time.sleep(interval)      # Wait for the specified interval
+except KeyboardInterrupt:
+    print("Script stopped.")
+```
+
+Save the above code as `run.py` and in Terminal, run:
+
+```bash
+python3 run.py
+```
+
+The script will press the Shift key every minute (or whatever interval you set).
+This action is enough to keep your Mac awake until you’re ready to quit.
+
+To stop the script, simply press `Ctrl + C`.
+
+## How This Works
+
+The repeated key press tricks macOS into thinking you’re still active, so it
+won’t enter sleep mode. While this isn’t the only way to keep a Mac awake, it’s
+a straightforward solution that doesn’t require downloading any extra apps.
+
+## A Few Notes
+
+- This might not be the “best” solution, and if you’re running macOS 18 or
+  later, there may be built-in options I haven’t explored yet.
+
+Hope this helps someone out there! Thanks for reading, and peace ✌️❤️

@@ -55,7 +55,7 @@ export default function Home() {
 
             <p className='mt-3 inline-block cursor-pointer'>
               <a
-                href='/_static/docs/Chandrasekaraa_RG_Software_Developer_Resume.pdf'
+                href='/_static/docs/public/_static/docs/Chan_Software_Developer_Resume.pdf'
                 target='_blank'
                 rel='noopener noreferrer'
                 className='rounded-lg border border-black px-3 py-1 text-black transition-colors duration-200 ease-in hover:bg-black hover:text-white dark:border-white dark:text-white dark:hover:bg-white dark:hover:text-black'

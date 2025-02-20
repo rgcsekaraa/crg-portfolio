@@ -133,7 +133,7 @@ const Modal: React.FC<ModalProps> = ({ isOpen, onClose, project }) => {
           </div>
         )}
 
-        {/* Frontend, Backend, DevOps */}
+        {/* Frontend, Backend, DevOps
         <div className='mb-4 grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3'>
           {project.frontend && (
             <div>
@@ -188,7 +188,7 @@ const Modal: React.FC<ModalProps> = ({ isOpen, onClose, project }) => {
               </div>
             </div>
           )}
-        </div>
+        </div> */}
 
         {/* Complexity, Last Updated, License */}
         <div className='mb-4 grid grid-cols-1 gap-4 sm:grid-cols-3'>

@@ -315,13 +315,13 @@ const Status = () => (
 
 // Mapping sections to components
 const sections = [
-  { name: '1. Summary', component: <Summary /> },
-  { name: '2. Experience', component: <Experience /> },
-  { name: '3. Education', component: <Education /> },
-  { name: '4. Skills', component: <Skills /> },
-  { name: '5. Certifications', component: <Certifications /> },
-  { name: '6. Honors & Awards', component: <HonorsAndAwards /> },
-  { name: '7. Status', component: <Status /> }
+  { name: 'Summary', component: <Summary /> },
+  { name: 'Experience', component: <Experience /> },
+  { name: 'Education', component: <Education /> },
+  { name: 'Skills', component: <Skills /> },
+  { name: 'Certifications', component: <Certifications /> },
+  { name: 'Honors & Awards', component: <HonorsAndAwards /> },
+  { name: 'Status', component: <Status /> }
 ]
 
 export default function About() {

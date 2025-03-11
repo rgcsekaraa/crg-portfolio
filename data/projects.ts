@@ -1,75 +1,6 @@
 export const ALL_PROJECTS = [
   // Web Apps
-  {
-    title: 'WexDB',
-    tags: ['Next.js', 'Tailwind CSS', 'TypeScript'],
-    description:
-      'A website for all workouts and exercises with embedded YouTube links for quick reference.',
-    repo: 'https://github.com/rgcsekaraa/wexdb',
-    liveDemo: 'https://wexdb.vercel.app',
-    status: 'Completed',
-    category: 'Web Apps',
-    complexity: 'Medium',
-    frontend: ['Next.js', 'Tailwind CSS', 'TypeScript'],
-    backend: [],
-    devOps: [],
-    lastUpdated: '2024-09-01',
-    license: 'MIT',
-    features: [
-      'Comprehensive workout database',
-      'Embedded YouTube links for exercises',
-      'User-friendly interface'
-    ]
-  },
-  {
-    title: 'CheckFace',
-    tags: ['Next.js', 'Tailwind CSS', 'TypeScript', 'React Webcam'],
-    description:
-      'A real-time webcam app to check your face and appearance, with theme toggling and mirror options for enhanced user experience.',
-    repo: 'https://github.com/rgcsekaraa/checkface',
-    liveDemo: 'https://www.checkface.io',
-    status: 'Completed',
-    category: 'Web Apps',
-    complexity: 'Easy',
-    frontend: ['Next.js', 'Tailwind CSS', 'TypeScript', 'React Webcam'],
-    backend: [],
-    devOps: [],
-    lastUpdated: '2024-10-08',
-    license: 'MIT',
-    features: [
-      'Real-time webcam feed with mirror toggle',
-      'Dark and light theme switcher',
-      'Mobile-friendly and responsive design',
-      'Privacy-focused: no data recording or storage'
-    ]
-  },
-  {
-    title: 'Being Foodie',
-    tags: [
-      'Node.js',
-      'Handlebars.js',
-      'APIs',
-      'Edamam API',
-      'OpenWeather API',
-      'OpenAI API'
-    ],
-    description:
-      'Being Foodie is a web app designed for culinary exploration, helping users discover local cuisine. It integrates multiple APIs to provide accurate recipe measurements and real-time weather information for nearby restaurants.',
-    repo: 'https://github.com/rgcsekaraa/BeingFoodie',
-    status: 'Completed',
-    complexity: 'Medium',
-    frontend: ['Handlebars.js'],
-    backend: ['Node.js'],
-    devOps: [],
-    lastUpdated: '2024-09-01',
-    license: 'MIT',
-    category: 'Web Apps',
-    features: [
-      'API integration with Edamam for recipe measurements',
-      'Real-time weather info using Google Maps and OpenWeather API',
-      'Recipe exploration and restaurant discovery'
-    ]
-  },
+  
   {
     title: 'Todorama',
     tags: ['shadcn', 'Google SSO', 'Next.js', 'Vercel', 'prisma'],
@@ -161,26 +92,113 @@ export const ALL_PROJECTS = [
     ]
   },
 
-  // Backend Projects
   {
-    title: 'Shak-AI',
-    tags: ['T5 LLM', 'FastAPI', 'React', 'Vite'],
+    title: 'FirePath',
+    tags: ['Django', 'Leaflet.js', 'PostgreSQL'],
     description:
-      'A real-time voice translation tool using T5 LLM. Users can upload files, query information through voice interaction, and get real-time results in their preferred language.',
-    repo: 'https://github.com/rgcsekaraa/shak-ai',
-    liveDemo: 'https://shak-ai.vercel.app',
+      'A full-stack project for real-time bushfire monitoring, integrating a map with alerts for bushfire activity. Developed as part of an industry project with real-time data integration.',
     status: 'Completed',
     complexity: 'High',
-    frontend: ['React', 'Vite'],
-    backend: ['FastAPI', 'T5 LLM'],
+    frontend: ['Leaflet.js', 'Tailwind CSS'],
+    backend: ['Django', 'PostgreSQL'],
     devOps: ['AWS', 'Docker'],
-    lastUpdated: '2024-09-08',
-    license: 'Apache 2.0',
-    category: 'Backend Projects',
+    lastUpdated: '2024-09-01',
+    license: 'GPL',
+    category: 'Full-Stack Projects',
     features: [
-      'Real-time voice translation',
-      'File query via voice',
-      'T5 LLM integration for accurate results'
+      'Real-time bushfire monitoring',
+      'Map integration with alerts',
+      'Industry-level data integration'
+    ]
+  },
+
+  // Academic/Research Projects
+  {
+    title: 'Guardify',
+    tags: ['eBPF', 'npm', 'pip', 'Security'],
+    description:
+      'A backend-focused security monitoring tool using eBPF for real-time package installation monitoring and suspicious activity detection.',
+    status: 'Completed',
+    complexity: 'High',
+    backend: ['eBPF', 'Kernel'],
+    devOps: ['Docker', 'AWS'],
+    lastUpdated: '2024-09-01',
+    license: 'MIT',
+    category: 'Academic/Research Projects',
+    features: [
+      'Real-time security monitoring',
+      'Package installation tracking',
+      'eBPF integration'
+    ]
+  },
+  {
+    title: 'WexDB',
+    tags: ['Next.js', 'Tailwind CSS', 'TypeScript'],
+    description:
+      'A website for all workouts and exercises with embedded YouTube links for quick reference.',
+    repo: 'https://github.com/rgcsekaraa/wexdb',
+    liveDemo: 'https://wexdb.vercel.app',
+    status: 'Completed',
+    category: 'Web Apps',
+    complexity: 'Medium',
+    frontend: ['Next.js', 'Tailwind CSS', 'TypeScript'],
+    backend: [],
+    devOps: [],
+    lastUpdated: '2024-09-01',
+    license: 'MIT',
+    features: [
+      'Comprehensive workout database',
+      'Embedded YouTube links for exercises',
+      'User-friendly interface'
+    ]
+  },
+  {
+    title: 'CheckFace',
+    tags: ['Next.js', 'Tailwind CSS', 'TypeScript', 'React Webcam'],
+    description:
+      'A real-time webcam app to check your face and appearance, with theme toggling and mirror options for enhanced user experience.',
+    repo: 'https://github.com/rgcsekaraa/checkface',
+    liveDemo: 'https://www.checkface.io',
+    status: 'Completed',
+    category: 'Web Apps',
+    complexity: 'Easy',
+    frontend: ['Next.js', 'Tailwind CSS', 'TypeScript', 'React Webcam'],
+    backend: [],
+    devOps: [],
+    lastUpdated: '2024-10-08',
+    license: 'MIT',
+    features: [
+      'Real-time webcam feed with mirror toggle',
+      'Dark and light theme switcher',
+      'Mobile-friendly and responsive design',
+      'Privacy-focused: no data recording or storage'
+    ]
+  },
+  {
+    title: 'Being Foodie',
+    tags: [
+      'Node.js',
+      'Handlebars.js',
+      'APIs',
+      'Edamam API',
+      'OpenWeather API',
+      'OpenAI API'
+    ],
+    description:
+      'Being Foodie is a web app designed for culinary exploration, helping users discover local cuisine. It integrates multiple APIs to provide accurate recipe measurements and real-time weather information for nearby restaurants.',
+    repo: 'https://github.com/rgcsekaraa/BeingFoodie',
+    status: 'Completed',
+    complexity: 'Medium',
+    frontend: ['Handlebars.js'],
+    backend: ['Node.js'],
+    devOps: [],
+    lastUpdated: '2024-09-01',
+    license: 'MIT',
+    category: 'Web Apps',
+    features: [
+      'API integration with Edamam for recipe measurements',
+      'Real-time weather info using Google Maps and OpenWeather API',
+      'Recipe exploration and restaurant discovery'
     ]
   },
 
@@ -226,45 +244,7 @@ export const ALL_PROJECTS = [
       'Admin controls for fee management'
     ]
   },
-  {
-    title: 'FirePath',
-    tags: ['Django', 'Leaflet.js', 'PostgreSQL'],
-    description:
-      'A full-stack project for real-time bushfire monitoring, integrating a map with alerts for bushfire activity. Developed as part of an industry project with real-time data integration.',
-    status: 'Completed',
-    complexity: 'High',
-    frontend: ['Leaflet.js', 'Tailwind CSS'],
-    backend: ['Django', 'PostgreSQL'],
-    devOps: ['AWS', 'Docker'],
-    lastUpdated: '2024-09-01',
-    license: 'GPL',
-    category: 'Full-Stack Projects',
-    features: [
-      'Real-time bushfire monitoring',
-      'Map integration with alerts',
-      'Industry-level data integration'
-    ]
-  },
-
-  // Academic/Research Projects
-  {
-    title: 'Guardify',
-    tags: ['eBPF', 'npm', 'pip', 'Security'],
-    description:
-      'A backend-focused security monitoring tool using eBPF for real-time package installation monitoring and suspicious activity detection.',
-    status: 'Completed',
-    complexity: 'High',
-    backend: ['eBPF', 'Kernel'],
-    devOps: ['Docker', 'AWS'],
-    lastUpdated: '2024-09-01',
-    license: 'MIT',
-    category: 'Academic/Research Projects',
-    features: [
-      'Real-time security monitoring',
-      'Package installation tracking',
-      'eBPF integration'
-    ]
-  },
+  
 
   // Contributions/Open Source
   {

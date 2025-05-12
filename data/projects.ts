@@ -1,6 +1,6 @@
 export const ALL_PROJECTS = [
   // Web Apps
-  
+
   {
     title: 'Todorama',
     tags: ['shadcn', 'Google SSO', 'Next.js', 'Vercel', 'prisma'],
@@ -199,73 +199,6 @@ export const ALL_PROJECTS = [
       'API integration with Edamam for recipe measurements',
       'Real-time weather info using Google Maps and OpenWeather API',
       'Recipe exploration and restaurant discovery'
-    ]
-  },
-
-  // Full-Stack Projects
-  {
-    title: '2day Diary App',
-    tags: ['Tailwind CSS', 'MongoDB', 'Next.js'],
-    description:
-      'A full-stack diary app with secure login, featuring a clean and minimalistic UI for daily entries. Users can write and store daily thoughts securely with biometric login.',
-    repo: 'https://github.com/rgcsekaraa/2day-diary',
-    liveDemo: 'https://2day-frontend.vercel.app',
-    status: 'In Progress',
-    complexity: 'Medium',
-    frontend: ['Next.js', 'Tailwind CSS'],
-    backend: ['MongoDB'],
-    devOps: ['Docker', 'Vercel'],
-    lastUpdated: '2024-09-01',
-    license: 'MIT',
-    category: 'Full-Stack Projects',
-    features: [
-      'Secure login with biometrics',
-      'Daily diary entries',
-      'Minimalistic and user-friendly UI'
-    ]
-  },
-  {
-    title: 'Grota (Gym + Rota)',
-    tags: ['React', 'Node.js', 'Express', 'MongoDB'],
-    description:
-      'A full gym management platform that allows gym coaches to manage workout schedules, memberships, and fees. Includes a personal interaction approach and messaging service between coaches and members.',
-    repo: 'https://github.com/rgcsekaraa/grota',
-    status: 'In Progress',
-    complexity: 'High',
-    frontend: ['React', 'Tailwind CSS'],
-    backend: ['Node.js', 'Express', 'MongoDB'],
-    devOps: ['AWS', 'Docker'],
-    lastUpdated: '2024-09-01',
-    license: 'MIT',
-    category: 'Full-Stack Projects',
-    features: [
-      'Gym management for schedules and memberships',
-      'Messaging service for personal interaction',
-      'Admin controls for fee management'
-    ]
-  },
-  
-
-  // Contributions/Open Source
-  {
-    title: 'fnfx - CLI Tool',
-    tags: ['npm', 'CLI', 'Node.js', 'File System'],
-    description:
-      'fnfx is a CLI tool that generates a structured tree view of files and folders in a directory. It allows exporting the tree in various formats such as text, JSON, and HTML, with options for ignoring specific folders like node_modules or .next.',
-    repo: 'https://github.com/rgcsekaraa/fnfx',
-    liveDemo: 'https://www.npmjs.com/package/fnfx',
-    status: 'Completed',
-    complexity: 'Low',
-    backend: ['Node.js', 'CLI'],
-    devOps: [],
-    lastUpdated: '2024-09-22',
-    license: 'MIT',
-    category: 'Contributions/Open Source',
-    features: [
-      'Generate a visual tree structure of your file system',
-      'Export the tree to text, JSON, and HTML formats',
-      'Ignore specific folders like node_modules or .next',
-      'Output results directly in the terminal or save to a file'
     ]
   }
 ] as const
